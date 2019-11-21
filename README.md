@@ -1,83 +1,41 @@
-# StayPuft
+![Ghost Compatability](http://img.shields.io/badge/Compatible%20with%20Ghost-v3%20+-brightgreen.svg)
 
-A programming-oriented theme for [Ghost](https://github.com/TryGhost/Ghost). This is the latest development version of StayPuft. If you're just looking to download the latest release, head over to the [releases](https://github.com/dlecina/StayPuft/releases) page.
+# Mnml — a Typographically Tasteful [Ghost](http://github.com/tryghost/ghost/) Blog Theme
 
-![screenshot-mockup](/assets/screenshots/screenshot-mockup.png?raw=true)
+Mnml is a beautiful, responsive, content-focused theme with great typography. The use of a type-scale, responsive typography, and carefully set line-length provide an optimal reading experience. Mnml also features post thumbnails on the homepage, an elegant print stylesheet, code syntax highlighting, and more.
 
-## Features
+**UPDATE: If you like MNML, check out [Laminim](https://creativemarket.com/Curiositry/1037280-Laminim-%E2%80%94-Ghost-Theme-for-Bloggers), my new ghost theme for serious bloggers.**
 
-* Responsive design.
-* Custom [⚡AMP](https://blog.ghost.org/custom-amp-themes/) theme ([ℹ️](https://themes.ghost.org/docs/amp)).
-* Post comments using [Disqus](http://disqus.com/).
-* In-site search using [GhostHunter](https://github.com/i11ume/ghostHunter).
-* Support for [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
-* Syntax highlighting using [Prism](https://github.com/LeaVerou/prism/), with Markdown support.
+If you have a question or have found a bug please **open an issue** and I’ll try to help as soon as possible; if you like this theme, or use it on your blog, make me happy by **starring the project**, or spreading the word!
 
-## Demo
+### See mnml in the wild!
+- [mnml.herokuapp.com](http://mnml.herokuapp.com) Site for the theme. Runs latest official *release* or newer
+- Check out the [*MNML in use* wiki page](https://github.com/curiositry/mnml-ghost-theme/wiki/The-Mnml-Ghost-Theme-in-Use), which lists a few dozen blogs I’ve spotted that sport the theme.
 
-This theme is being used in my [blog](http://davidlecina.com/).
+### Features:
 
-*  ["Welcome to Ghost"](http://davidlecina.com/blog/welcome-to-ghost/)
-*  ["Using the Ghost editor"](http://davidlecina.com/blog/the-editor/)
-*  ["Advanced Markdown tips"](http://davidlecina.com/blog/advanced-markdown/)
-*  [Syntax highlighting demo](http://davidlecina.com/blog/prism-demo/)
+- Compatible with the latest version of Ghost
+- Totally responsive
+- Perfect readability — MNML features a type-scale, responsive typography, and carefully set line length for the best reading experience.
+- Great Typography
+  - Typeset in Source Serif Pro, Source Sans Pro, and Alegreya
+  - Blazingly fast [Brick](http://brick.im) webfonts
+  - Cross-browser drop-capitals
+  - Attractive Pullquotes
+- Responsive `<aside>` tags for interrupting yourself
+- Prism.js syntax highlighting
+- Better horizontal rules
+- `.thumb` class for inline responsive thumbnails
+- Responsive post thumbnails on the homepage
+- Elegant print stylesheet
+- Robots.txt improves SEO by removing tag listings from search engines so your content is more prominent
+- Responsive, accessible menu for static pages (or anything else) that stays out of the way [NEW!]
+- Comments powered by Disqus, loaded asynchronously so they don’t slow down your site. [NEW!]
+- Blazing fast
+  <!-- - ~~Thumbnails are resized automatically with Firesize.~~ Firesize shut down unexpectedly, and I am still looking for a replacement. -->
+  - Non-essential scripts and styles are loaded asynchronously or deferred
+  - Comments are only loaded when needed
+  - Uses the fastest math rendering library, and the fastest webfont provider [citation needed]
+- Optional Math rendering with KaTeX
 
-## Compatibility
-
-**The current StayPuft version is 2.9.3, is tested against Ghost 2.15.0 and is expected to work down to Ghost 2.0.0.**
-
-If the current version of StayPuft is not compatible with the version of Ghost you're running, try looking for an older one in the [Releases section](https://github.com/dlecina/StayPuft/releases).
-
-## Installation
-
-* Clone the repository or download the [latest release](https://github.com/dlecina/StayPuft/releases/latest) and extract it.
-* Copy `partials/custom/nav-external.hbs.example` to `partials/custom/nav-external.hbs` and customize it with your own external links.
-* (Optional) Copy `partials/custom/disqus.hbs.example` to `partials/custom/disqus.hbs` and customize it with your [Disqus shortname](https://help.disqus.com/installation/whats-a-shortname).
-* Run `yarn zip` in the theme's root directory to create `dist/StayPuft.zip`.
-* Go to your blog's Settings page (typically `/admin` or `/ghost`).
-* In the Design tab, upload and activate StayPuft.
-* (Optional) In the Code Injection tab, add any snippets you may need, such as [Google Analytics](https://help.ghost.org/article/16-google-analytics).
-
-## FAQ
-
-1. **Where should I report issues or request a new feature?**
-
-  The appropriate place to report issues or request new features is the [Issues section](https://github.com/dlecina/StayPuft/issues).
-
-2. **Where should I discuss other topics?**
-
-  To discuss other topics, please find an appropriate post in my blog's [Staypuft tag](http://davidlecina.com/blog/tag/staypuft/) and post a comment there.
-
-3. **How can I disable comments?**
-
-  To disable comments, simply remove the line `{{> "post-comments"}}` from `post.hbs` and `page.hbs`. You do not need `disqus.hbs` in this case.
-
-4. **How can I disable comments only on pages?**
-
-  To disable comments only on pages, simply remove the line `{{> "post-comments"}}` from `page.hbs`.
-
-5. **How do I use Syntax Highlighting with Markdown?**
-
-  See the [Syntax highlighting demo](http://davidlecina.com/blog/prism-demo/).
-
-## Development
-
-StayPuft styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
-
-```bash
-$ yarn install
-$ yarn dev
-```
-
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-You can keep Ghost running in your [local development environment](https://docs.ghost.org/docs/install-local) by running this from Ghost's root directory:
-
-```bash
-nodemon current/index.js --watch content/themes/StayPuft --ext hbs,js,css
-```
-
-# Copyright & License
-
-Copyright (c) 2013-2019 Ghost Foundation - Released under the [MIT license](LICENSE).  
-Copyright (c) 2014-2019 David Lecina Fuentes - Released under the [MIT license](LICENSE).  
+![Screenshot](http://cdn.autodidacts.io/img/mnml/mnml-v3.5.0.png)

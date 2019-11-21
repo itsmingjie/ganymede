@@ -1,113 +1,66 @@
 <!DOCTYPE html>
-<html lang="{{lang}}">
+<html lang="{{@site.lang}}">
 <head>
-
-    {{!-- Document Settings --}}
+    {{! Document Settings }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{!-- Base Meta --}}
-    <title>{{meta_title}}</title>
+    {{! Page Meta }}
+    <title>{{meta_title}}{{#is "post, page"}} — {{@site.title}}{{/is}}</title>
+
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "built/staypuft.css"}}" />
-    
-    {{!-- Fonts --}}
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    
-    {{!-- Font Awesome --}}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
 
-    {{!-- Prism --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+<!-- For speed, I’ve added the response from this link straight into defer.css-->
+<!--<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Serif+Pro:400,700/Source+Sans+Pro:400,900,400i,900i/Alegreya:400i,700i">-->
 
-    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
-
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}}" id="body">
 
-    <div class="site-wrapper">
+    {{! Everything else gets inserted here }}
+    {{{body}}}
 
-        {{!-- Sidebar (Landscape) / Header (Portrait) --}}
-        <div id="sidebar" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
-            <div>
-                {{!-- Header --}}
-                {{> "site-header"}}
-            </div>
-            <div class="search-form">
-                <div class="search-form-content">
-                    {{> "search-form"}}
-                </div>
-            </div>
-            <nav class="main-nav">
-                {{#if @blog.navigation}}
-                {{navigation}}
-                {{/if}}
-            </nav>
-            <div class="landscape">
-                {{!-- Footer (Landscape mode only)--}}
-                {{> "site-footer" }}
-            </div>
-        </div>
+    {{> footer}}
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        <main id="site-main" class="site-main outer">
-            <div class="inner">
-                <div class="search-results">
-                    {{> "search-results"}}
-                </div>
-                <div class="main-body">
-                    {{{body}}}
-                </div>
-            </div>
-        </main>
-
-        {{!-- Footer (Portrait mode only) --}}
-        <div class="portrait">
-            {{> "site-footer" }}
-        </div>
-
-    </div>
-
-    {{> "subscribe-overlay"}}
-
-    <script>
-        var images = document.querySelectorAll('.kg-gallery-image img');
-        images.forEach(function (image) {
-            var container = image.closest('.kg-gallery-image');
-            var width = image.attributes.width.value;
-            var height = image.attributes.height.value;
-            var ratio = width / height;
-            container.style.flex = ratio + ' 1 0%';
-        })
-    </script>
-
-
-    {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}"></script>
-
-    {{!-- ghostHunter --}}
-    <script type="text/javascript" src="{{asset "js/jquery.ghosthunter.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.ghosthunter-staypuft.js"}}"></script>
-
-    {{!-- Prism --}}
-    <script type="text/javascript" src="{{asset "js/prism/prism-preprocessor.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/prism/prism.js"}}"></script>
-    <script type="text/javascript">Prism.plugins.autoloader.languages_path = "{{@site.url}}/assets/js/prism/components/";</script>
-
-    {{#if pagination.pages}}
-    <script src="{{asset "built/infinitescroll.js"}}"></script>
+    <!--
+    This generates a handsome modal menu and hamburger icon. If you want to use it, edit     menu.hbs and add your links (line ~146), then remove the ! from this helper to           activate it.
+    -->
+    {{#if @site.navigation}}
+      {{>menu}}
     {{/if}}
 
-    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
-    {{{block "scripts"}}}
 
-    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    <!-- Ghost outputs important scripts and data with this tag -->
     {{ghost_foot}}
+
+    <!--
+    This loads katex.hbs in; if a page has anything with the class .math, katex.hbs           loads Khan Academy’s Tex math typesetting library and runs it on the content.
+
+    If you don’t want to use KaTeX, comment this out.
+    -->
+    {{>katex}}
+
+    <script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = '{{asset "css/defer.css"}}';
+        var h = document.getElementsByTagName('head')[0];
+        h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
+
+    {{! The main JavaScript file for Mnml (Look, ma! No jQuery!)}}
+    <script async src="{{asset "js/index.js"}}"></script>
+    <script defer src="{{asset "js/prism.min.js"}}"></script>
 
 </body>
 </html>

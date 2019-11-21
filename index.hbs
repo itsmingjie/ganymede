@@ -1,13 +1,24 @@
 {{!< default}}
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
-{{!-- The main content area --}}
-<div class="post-feed">
-    {{#foreach posts}}
+{{! The big featured header }}
+<header class="main-header">
+  <nav class="main-nav clearfix nmt">
+    <a class="blog-logo"  href="{{@site.url}}">{{#if @site.logo}}<img src="{{@site.logo}}" alt="Blog Logo"/>{{/if}}</a>
 
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{> "post-card"}}
+    <div class="main-header-content">
+        <h1 class="page-title typl8-gamma"> {{@site.title}}</h1>
+        <h2 class="page-description typl8-epsilon">{{@site.description}}</h2>
+    </div>
+  </nav>
+</header>
 
-    {{/foreach}}
-</div>
+
+
+{{! The main content area on the homepage }}
+<main id="content" class="content">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+</main>

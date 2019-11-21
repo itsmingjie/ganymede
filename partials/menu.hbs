@@ -1,0 +1,35 @@
+<!--
+THE MENU: Enabling this partial creates a hamburger icon that opens a menu. It’s responsive, lightweight, and works with javascript disabled.
+-->
+
+
+<!-- Trigger element, which is hidden -->
+<input type="checkbox" id="menu-trigger" />
+
+<!-- Thus label which control the trigger. The hamburger icon is a background image in      the CSS (base64 encoded svg) in main.css. Hover and close states in defer.css-->
+<label for="menu-trigger" id="open-menu" class="open-menu btn"></label>
+
+<!-- The menu that slides in. Styles in defer.css -->
+<nav class="menu" id="menu">
+  {{navigation}}
+</nav>
+
+<!--
+This makes the rest of the page move down with the menu for style points, but is              optional. The menu works fine with pure css.
+-->
+<script>
+  var navTrigger = document.getElementById("menu-trigger");
+  var menu = document.getElementById("menu");
+  var bodyTag = document.getElementsByTagName("body")[0];
+
+
+navTrigger.onclick = function () {
+  if(navTrigger.checked){
+    bodyTag.classList.add("menu-transition");
+    document.getElementsByTagName("body")[0].style.marginTop = menu.clientHeight+"px";
+  }else{
+    bodyTag.classList.add("menu-transition");
+    document.getElementsByTagName("body")[0].style.marginTop = "0";
+  }
+}
+</script>
