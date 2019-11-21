@@ -247,7 +247,6 @@ h1,h2,h3,h4,h5,h6,.card__title a {
 }
 .post__content h1 {
     letter-spacing: 0.04rem;
-    text-transform: uppercase;
 }
 .post__content a {
     /* box-shadow: #1c2437 0px -0.5px 0px inset; */
