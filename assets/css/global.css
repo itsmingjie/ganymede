@@ -1,0 +1,224 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+  /* Colours */
+  --darkgrey: #2b2b2b;
+  --whitegrey: #fafafa;
+  /* --whitegrey: #e5eff5; */
+}
+
+/* Reset
+/* ---------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  font-kerning: auto;
+  /* font-family: 'Avenir', 'Open Sans', sans-serif; */
+  font-family: 'Charter', 'Source Serif Pro', serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  color: var(--darkgrey);
+}
+/* ol, ul {
+  list-style: none;
+} */
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong, b {
+  /* font-family: 'charterbold'; */
+  font-weight: bold;
+}
+em, i {
+  /* font-family: 'charteritalic'; */
+  font-style: italic;
+}
+a img {
+  border: none;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+iframe {
+  width: 100%;
+  /* height: 100%; */
+}
+/* END RESET*/
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+a {
+  text-decoration: none;
+  transition: all .4s ease-in-out;
+  /* color: #0080ff; */
+  color: rgba(0,0,0,.84);
+}
+a:hover {
+  /* color: #03a6ff; */
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+p,
+ul,
+ol,
+dl {
+    margin: 0 0 1.3em 0;
+}
+
+ol,
+ul {
+    /* padding-left: 2em; */
+    /* padding-right: 1.5em; */
+}
+
+/* ol ol,
+ul ul,
+ul ol,
+ol ul {
+    margin: 0.5em 0 1em;
+} */
+
+/* ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+} */
+
+li {
+  margin: 0 0 0.2em 1.5em;
+  padding-left: 0.3em;
+}
+
+blockquote {
+  margin-bottom: 1.5em;
+  padding: 0 0.8rem;
+  box-sizing: border-box;
+  /* margin: 0 0 1.5em -1.4em; */
+  /* border-left: 0.15em solid; */
+  /* font-style: italic; */
+}
+
+blockquote,
+blockquote em,
+blockquote strong {
+  /* font-family: 'charteritalic'; */
+  /* font-size: 1.25rem; */
+  /* color: rgba(0,0,0,.64); */
+  font-style: italic;
+  line-height: 1.54;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1.25;
+  margin: 1.1rem 0 0.9rem 0;
+  font-weight: 600;
+  /* line-height: 1.15; */
+  /* font-weight: 600; */
+    /* font-family: 'charterbold'; */
+    /* font-family: 'Avenir'; */
+}
+
+h1 {
+  /* margin: 1.5em 0 0.6em 0; */
+  font-size: 1.45rem;
+  /* font-family: 'charterbold'; */
+  /* line-height: 1.25; */
+}
+
+h2 {
+  /* margin: 1.5em 0 0.5em 0; */
+  font-size: 1.35rem;
+  /* font-family: 'charterbold'; */
+}
+
+h3 {
+  margin: 0.6rem 0 0.5rem 0;
+  font-size: 1.24rem;
+  /* font-family: 'charterbold'; */
+}
+
+hr {
+  /* position: relative; */
+  /* display: block; */
+  /* width: 100%; */
+  margin: 1.9rem 0 3.4rem;
+  /* padding: 0; */
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+body {
+  font-size: 1.24rem;
+  line-height: 1.54;
+  color: rgba(0,0,0,.8);
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.34rem;
+  }
+  h2 {
+    font-size: 1.14rem;
+  }
+  h3 {
+    font-size: 1.14rem;
+  }
+  body {
+    font-size: 1.14rem;
+    line-height: 1.54;
+  }
+}

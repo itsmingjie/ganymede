@@ -1,24 +1,45 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{> header}}
 
-{{! The big featured header }}
-<header class="main-header">
-  <nav class="main-nav clearfix nmt">
-    <a class="blog-logo"  href="{{@site.url}}">{{#if @site.logo}}<img src="{{@site.logo}}" alt="Blog Logo"/>{{/if}}</a>
+<main class="main_minimal" role="main">
+    {{#foreach posts}}
+    <article class="card" role="article">
 
-    <div class="main-header-content">
-        <h1 class="page-title typl8-gamma"> {{@site.title}}</h1>
-        <h2 class="page-description typl8-epsilon">{{@site.description}}</h2>
-    </div>
-  </nav>
-</header>
+        {{#if feature_image}}
+        <div class="card__img-wrapper">
+            <a href="{{url}}">
+                {{!-- This is a responsive image, it loads different sizes depending on device
+                https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+                    <img class="card__img"
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w,
+                                {{img_url feature_image size="l"}} 1000w,
+                                {{img_url feature_image size="xl"}} 2000w"
+                        sizes="(max-width: 1000px) 400px, 700px"
+                        src="{{img_url feature_image size="m"}}"
+                        alt="{{title}}"
+                    />
+            </a>
+        </div>
+        {{/if}}
 
+        <div class="card__content">
+            <header>
+                <h2 class="card__title"><a href="{{url}}">{{title}}</a></h2>
+            </header>
+            <div class="card__desc">
+                <a href="{{url}}">{{excerpt words="33"}}
+                </a>
+            </div>
+            <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+        </div>
 
-
-{{! The main content area on the homepage }}
-<main id="content" class="content">
-
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
+    </article>
+    {{/foreach}}
 
 </main>
+{{pagination}}
+
+{{> footer}}

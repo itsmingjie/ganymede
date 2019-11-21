@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
 <head>
-    {{! Document Settings }}
+
+    {{!-- Document Settings --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{! Page Meta }}
-    <title>{{meta_title}}{{#is "post, page"}} — {{@site.title}}{{/is}}</title>
-
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/global.css"}}" />
+    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "fonts/charter/stylesheet.css"}}" /> --}}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
 
-<!-- For speed, I’ve added the response from this link straight into defer.css-->
-<!--<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Serif+Pro:400,700/Source+Sans+Pro:400,900,400i,900i/Alegreya:400i,700i">-->
-
-    {{! Ghost outputs important style and meta data with this tag }}
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
+
 </head>
-<body class="{{body_class}}" id="body">
+<body class="{{body_class}}">
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+    <div class="wrapper_minimal">
 
-    {{> footer}}
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
 
-    <!--
-    This generates a handsome modal menu and hamburger icon. If you want to use it, edit     menu.hbs and add your links (line ~146), then remove the ! from this helper to           activate it.
-    -->
-    {{#if @site.navigation}}
-      {{>menu}}
-    {{/if}}
+    </div>
 
-
-    <!-- Ghost outputs important scripts and data with this tag -->
-    {{ghost_foot}}
-
-    <!--
-    This loads katex.hbs in; if a page has anything with the class .math, katex.hbs           loads Khan Academy’s Tex math typesetting library and runs it on the content.
-
-    If you don’t want to use KaTeX, comment this out.
-    -->
-    {{>katex}}
-
+    {{!-- GALLERY --}}
     <script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = '{{asset "css/defer.css"}}';
-        var h = document.getElementsByTagName('head')[0];
-        h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
     </script>
 
-    {{! The main JavaScript file for Mnml (Look, ma! No jQuery!)}}
-    <script async src="{{asset "js/index.js"}}"></script>
-    <script defer src="{{asset "js/prism.min.js"}}"></script>
+    {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}"></script>
+
+    {{!-- {{#if pagination.pages}}
+    <script src="{{asset "built/infinitescroll.js"}}"></script>
+    {{/if}} --}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
 
 </body>
 </html>

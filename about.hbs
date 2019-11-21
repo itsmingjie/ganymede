@@ -1,0 +1,28 @@
+{{!< default}}
+{{> header}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#page}}
+
+<main class="main_minimal" role="main">
+    <article class="article_minimal" role="article">
+        
+        <header class="postHeader_minimal">
+            <h1 class="post__title">{{title}}</h1>
+            {{!-- <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='dddd DD MMM YYYY'}}</time> --}}
+        </header>
+
+        <section class="post__content-wrapper">
+            <div class="post__content">
+                {{content}}
+            </div>
+        </section>
+        {{!-- <div class="postContent_minimal">
+            
+        </div> --}}
+        
+    </article>
+</main>
+
+{{/page}}
+{{> footer}}

@@ -1,0 +1,9 @@
+<nav class="pagination" role="pagination">
+  {{#if prev}}
+  <a class="pagination__link-next pagination__link" href="{{page_url prev}}">{{t "← Previous posts"}}</a>
+  {{/if}}
+  {{#if next}}
+  <a class="pagination__link-prev pagination__link" href="{{page_url next}}">{{t "More posts →"}}</a>
+  {{/if}}
+  <div class="clear"></div>
+</nav>
