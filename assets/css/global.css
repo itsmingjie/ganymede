@@ -40,6 +40,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   color: var(--darkgrey);
+  background-color: #ffffff;
 }
 /* ol, ul {
   list-style: none;
