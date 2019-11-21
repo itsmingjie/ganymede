@@ -7,6 +7,18 @@
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
 
+h1,h2,h3,h4,h5,h6,.card__title a {
+    font-family: 'Playfair Display', sans-serif!important;
+}
+
+.post__content {
+     line-height: 1.8;   
+}
+
+.post__title, .card__title {
+     text-transform: capitalize;   
+}
+
 .wrapper_minimal {
     /* box-sizing: border-box; */
     display: flex;
