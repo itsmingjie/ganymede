@@ -65,7 +65,7 @@
 .header__link {
     position: relative;
     margin-left: 2.1rem;
-    font-family: 'Georgia', 'Open Sans', sans-serif;
+    font-family: 'Charter', 'Open Sans', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     padding: 0;
@@ -125,7 +125,7 @@
     margin: 0;
 }
 .card__title a {
-    /* font-family: 'Georgia'; */
+    /* font-family: 'Charter'; */
     /* font-weight: 900; */
     color: rgba(0, 0, 0, 0.8);
 }
@@ -136,11 +136,11 @@
 }
 .card__desc a {
     color: rgba(0, 0, 0, 0.6);
-    /* font-family: 'Georgia'; */
+    /* font-family: 'Charter'; */
 }
 .date {
     display: block;
-    font-family: 'Georgia';
+    font-family: 'Charter';
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.58);
     /* margin: 0.3rem 0; */
@@ -197,7 +197,7 @@
 }
 .card__desc-project a {
     color: #8a8e99;
-    /* font-family: 'Georgia', 'Open Sans', serif; */
+    /* font-family: 'Charter', 'Open Sans', serif; */
 }
 
 /* 7. Post
@@ -366,7 +366,7 @@
     transition: transform .2s ease-in-out;
 }
 .footer__link-label {
-    font-family: 'Georgia', 'Open Sans', sans-serif;
+    font-family: 'Charter', 'Open Sans', sans-serif;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -390,7 +390,7 @@
     /* font-size: 1.28em; */
     font-size: 1.14em;
     font-weight: 600;
-    /* font-family: 'Georgia', 'Open Sans', sans-serif; */
+    /* font-family: 'Charter', 'Open Sans', sans-serif; */
 }
 @media (max-width: 500px) {
     .footer__wrapper-inner {
@@ -463,5 +463,5 @@
 .footer div,
 .footer a {
     color: #8a8e99;
-    font-family: 'Georgia', 'Open Sans', serif;
+    font-family: 'Charter', 'Open Sans', serif;
 }
