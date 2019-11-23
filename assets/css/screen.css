@@ -81,8 +81,11 @@ h6,
 }
 .header__subtitle {
   margin-left: 5px;
-  color: lightgray!important;
+  color: gray;
   font-size: 1rem;
+}
+.header__subtitle a {
+  color: gray;
 }
 .header__nav {
   display: flex;
