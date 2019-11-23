@@ -71,13 +71,18 @@ h6,
   font-weight: bold;
   margin: 0;
 }
-.header__title a {
+.header__title a.site__title {
   color: #1c2437;
   /* font-weight: bold; */
   /* font-family: 'Source Serif Pro', serif; */
   font-family: "Playfair Display", serif;
   /* text-transform: uppercase; */
   /* letter-spacing: 0.02rem; */
+}
+.header__subtitle {
+  margin-left: 5px;
+  color: lightgray!important;
+  font-size: 1rem;
 }
 .header__nav {
   display: flex;
