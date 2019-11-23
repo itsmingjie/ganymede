@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{!-- Base Meta --}}
-    <title>{{meta_title}}</title>
+    {{#is "home"}}
+        <title>{{meta_title}}</title>
+    {{else}}
+        <title>{{meta_title}} | {{@site.title}}</title>
+    {{/is}}
+
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
