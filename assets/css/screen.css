@@ -87,6 +87,11 @@ h6,
 .header__subtitle a {
   color: gray;
 }
+@media only screen and (max-width: 385px) {
+  .header__subtitle {
+    display: none;
+  }
+}
 .header__nav {
   display: flex;
   margin-left: auto;
