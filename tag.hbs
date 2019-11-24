@@ -11,7 +11,7 @@ into the {body} of the default.hbs template --}}
 {{!-- Extremely stupid way to approach "or" operator --}}
 {{#if prev}}
 {{pagination}}
-{{#else}}
+{{else}}
 {{#if next}}
 {{pagination}}
 {{/if}}
