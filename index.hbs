@@ -33,7 +33,10 @@ into the {body} of the default.hbs template --}}
                 <a href="{{url}}">{{excerpt words="33"}}
                 </a>
             </div>
-            <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+            <div class="card__meta">
+                <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                <a class="card__tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+            </div>
         </div>
 
     </article>

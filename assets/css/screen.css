@@ -174,8 +174,8 @@ h6,
   color: rgba(0, 0, 0, 0.6);
   /* font-family: 'Charter'; */
 }
-.date {
-  display: block;
+.date, .card__tag {
+  display: inline-block;
   font-family: "Charter";
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.58);
