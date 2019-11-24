@@ -184,6 +184,7 @@ h6,
 
 .card__tag .card__taglink {
   font-style: italic;
+  text-transform: lowercase;
 }
 
 .card__img-wrapper {
