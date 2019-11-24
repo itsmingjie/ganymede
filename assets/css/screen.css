@@ -182,6 +182,10 @@ h6,
   /* margin: 0.3rem 0; */
 }
 
+.card__tag .card__taglink {
+  font-style: italic;
+}
+
 .card__img-wrapper {
   margin-right: 2rem;
 }

@@ -35,7 +35,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="card__meta">
                 <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                <a class="card__tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                <span class="card__tag">in <a class="card__taglink" href="{{primary_tag.url}}">{{primary_tag.name}}</a></span>
             </div>
         </div>
 
