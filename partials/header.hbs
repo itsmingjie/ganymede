@@ -1,18 +1,8 @@
 <header class="header" role="banner">
-    {{#is "tag"}}
-    {{#tag}}
-    <h1 class="header__title">
-        <a class="site__title" title="#{{name}}" href='{{@site.url}}'>#{{name}}</a>
-    </h1>
-    <span class="header__subtitle">— &nbsp;<a href="{{@site.url}}">{{@site.title}}</a></span>
-    {{/tag}}
-    {{else}}
     <h1 class="header__title">
         <a class="site__title" title="{{@site.title}}" href='{{@site.url}}'>{{{@site.title}}}</a>
     </h1>
     <span class="header__subtitle">— by&nbsp;<a href="https://mingjie.info">@itsmingjie</a></span>
-    {{/is}}
-
     <nav class="header__nav" role="navigation">
         <a class="header__link" href="/about">About</a>
     </nav>

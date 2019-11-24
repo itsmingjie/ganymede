@@ -252,6 +252,14 @@ h6,
   font-weight: bold;
   margin: 0;
 }
+
+.tag__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 2.4rem;
+}
+
 @media (max-width: 500px) {
   .post__title {
     font-size: 1.6rem;
