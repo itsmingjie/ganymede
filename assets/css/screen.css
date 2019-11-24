@@ -174,7 +174,9 @@ h6,
   color: rgba(0, 0, 0, 0.6);
   /* font-family: 'Charter'; */
 }
-.date, .card__tag, .card__read-time {
+.date,
+.card__tag,
+.card__read-time {
   display: inline-block;
   font-family: "Charter";
   font-size: 0.8rem;
@@ -261,7 +263,8 @@ h6,
 }
 
 @media (max-width: 500px) {
-  .post__title, .tag__title {
+  .post__title,
+  .tag__title {
     font-size: 1.6rem;
   }
 }
@@ -511,4 +514,105 @@ h6,
 .footer a {
   color: #8a8e99;
   font-family: "Charter", "Open Sans", serif;
+}
+
+/* 12. Bookmark Card
+/* -------------------------------------------------------- */
+
+.kg-bookmark-card {
+  width: 100%;
+  position: relative;
+}
+
+.kg-bookmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  color: currentColor;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kg-bookmark-container:hover {
+  text-decoration: none;
+}
+
+.kg-bookmark-content {
+  flex-basis: 0;
+  flex-grow: 999;
+  padding: 20px;
+  order: 1;
+  font-size: 0.8em;
+  min-height: 12em;
+}
+
+.kg-bookmark-title {
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.kg-bookmark-metadata,
+.kg-bookmark-description {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
+
+.kg-bookmark-metadata {
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  bottom: 20px;
+}
+
+.kg-bookmark-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.kg-bookmark-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+  margin-right: 0.5em;
+  margin-bottom: 0.05em;
+}
+
+.kg-bookmark-thumbnail {
+  display: flex;
+  flex-basis: 18rem;
+  flex-grow: 1;
+}
+
+.kg-bookmark-thumbnail img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+.kg-bookmark-author {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-left: 0.6em;
+}
+
+.kg-bookmark-publisher {
+  margin-left: 0.6em;
+}
+
+.kg-bookmark-author::after {
+  content: "/";
+  margin-left: 0.6em;
 }
