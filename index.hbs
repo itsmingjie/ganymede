@@ -4,44 +4,7 @@ into the {body} of the default.hbs template --}}
 {{> header}}
 
 <main class="main_minimal" role="main">
-    {{#foreach posts}}
-    <article class="card" role="article">
-
-        {{#if feature_image}}
-        <div class="card__img-wrapper">
-            <a href="{{url}}">
-                {{!-- This is a responsive image, it loads different sizes depending on device
-                https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-                    <img class="card__img"
-                        srcset="{{img_url feature_image size="s"}} 300w,
-                                {{img_url feature_image size="m"}} 600w,
-                                {{img_url feature_image size="l"}} 1000w,
-                                {{img_url feature_image size="xl"}} 2000w"
-                        sizes="(max-width: 1000px) 400px, 700px"
-                        src="{{img_url feature_image size="m"}}"
-                        alt="{{title}}"
-                    />
-            </a>
-        </div>
-        {{/if}}
-
-        <div class="card__content">
-            <header>
-                <h2 class="card__title"><a href="{{url}}">{{title}}</a></h2>
-            </header>
-            <div class="card__desc">
-                <a href="{{url}}">{{excerpt words="33"}}
-                </a>
-            </div>
-            <div class="card__meta">
-                <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                <span class="card__tag">in <a class="card__taglink" href="{{primary_tag.url}}">#{{primary_tag.name}}</a></span>
-            </div>
-        </div>
-
-    </article>
-    {{/foreach}}
-
+    {{> loop}}
 </main>
 {{pagination}}
 
