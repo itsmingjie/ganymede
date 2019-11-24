@@ -141,7 +141,7 @@ blockquote {
   padding: 0 0.8rem;
   box-sizing: border-box;
   /* margin: 0 0 1.5em -1.4em; */
-  /* border-left: 0.15em solid; */
+  border-left: 0.15em solid!important;
   /* font-style: italic; */
 }
 
