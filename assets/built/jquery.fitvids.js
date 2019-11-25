@@ -8,7 +8,7 @@
 *
 */
 
-;(function( $ ){
+(function( $ ){
 
     'use strict';
   
