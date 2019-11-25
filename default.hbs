@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
 
     {{!-- Document Settings --}}
@@ -8,9 +9,9 @@
 
     {{!-- Base Meta --}}
     {{#is "home"}}
-        <title>{{meta_title}}</title>
+    <title>{{meta_title}}</title>
     {{else}}
-        <title>{{meta_title}} | {{@site.title}}</title>
+    <title>{{meta_title}} | {{@site.title}}</title>
     {{/is}}
 
     <meta name="HandheldFriendly" content="True" />
@@ -25,6 +26,7 @@
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}}">
 
     <div class="wrapper_minimal">
@@ -47,10 +49,8 @@
     </script>
 
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous" defer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
     </script>
     <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}" defer></script>
     <script type="text/javascript" src="{{asset "built/instantpage.js"}}" defer></script>
@@ -66,4 +66,5 @@
     {{ghost_foot}}
 
 </body>
+
 </html>
