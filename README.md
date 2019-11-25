@@ -1,10 +1,8 @@
-# Ganymede
+# 💫 Ganymede
 
 Ganymede is a content-focused, deploy-ready theme for [Ghost](http://github.com/tryghost/ghost/), designed for my personal blog [The Third Attempt](https://blog.mingjie.info).
 
 The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme) by [@jckyeh](https://github.com/jckyeh/).
-
-&nbsp;
 
 ![screenshot-desktop](https://asset.mingjie.info/ganymede.png)
 
