@@ -1,7 +1,7 @@
 {
-  "name": "callisto-tta",
+  "name": "ganymede",
   "version": "1.0.0",
-  "description": "Ghost theme developed for The Third Attempt blog. Based on Callisto.",
+  "description": "A content-focused, deploy-ready theme for Ghost.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "ghost",
     "theme",
     "ghost-theme",
-    "callisto"
+    "ganymede"
   ],
   "author": {
     "name": "Mingjie Jiang",
@@ -20,11 +20,10 @@
   "gpm": {
     "type": "theme",
     "categories": [
-      "Minimal",
-      "Personal Blogs"
+      "Minimal"
     ]
   },
-  "license": "ISC",
+  "license": "MIT",
   "config": {
     "posts_per_page": 10
   }
