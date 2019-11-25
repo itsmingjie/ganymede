@@ -6,7 +6,7 @@ The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme)
 
 &nbsp;
 
-![screenshot-desktop](https://asset.mingjie.info/genemede.png)
+![screenshot-desktop](https://asset.mingjie.info/ganemede.png)
 
 ## Improvements
 
