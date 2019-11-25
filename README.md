@@ -4,7 +4,9 @@ Ganymede is a content-focused, deploy-ready theme for [Ghost](http://github.com/
 
 The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme) by [@jckyeh](https://github.com/jckyeh/).
 
-![screenshot-desktop](https://asset.mingjie.info/ganymede.png)
+![screenshot-home](https://asset.mingjie.info/ganymede.png)
+![screenshot-reading](https://asset.mingjie.info/ganymede-2.png)
+![screenshot-tag](https://asset.mingjie.info/ganymede-3.png)
 
 ## Improvements
 
