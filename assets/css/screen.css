@@ -87,8 +87,9 @@ h6,
 .header__subtitle a {
   color: gray;
 }
-header__subtitle a::after {
+.header__subtitle a::after {
   content: ''!important;
+  margin: 0;
 }
 @media only screen and (max-width: 385px) {
   .header__subtitle {
@@ -521,6 +522,7 @@ header__subtitle a::after {
 
 .footer a::after {
   content: ''!important;
+  margin: 0!important;
 }
 
 /* 12. Bookmark Card
