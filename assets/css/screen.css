@@ -87,6 +87,9 @@ h6,
 .header__subtitle a {
   color: gray;
 }
+header__subtitle a::after {
+  content: ''!important;
+}
 @media only screen and (max-width: 385px) {
   .header__subtitle {
     display: none;
@@ -516,6 +519,10 @@ h6,
   font-family: "Charter", "Open Sans", serif;
 }
 
+.footer a::after {
+  content: ''!important;
+}
+
 /* 12. Bookmark Card
 /* -------------------------------------------------------- */
 
@@ -616,4 +623,9 @@ h6,
 .kg-bookmark-author::after {
   content: "/";
   margin-left: 0.6em;
+}
+
+a[target=_blank]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
 }
