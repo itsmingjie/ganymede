@@ -17,12 +17,7 @@ into the {body} of the default.hbs template --}}
         <section class="post__content-wrapper">
             <div class="post__content">
                 {{#has tag="#preview"}}
-                <blockquote>
-                    <em>
-                        This is a work in progress, and you're given early access to read it! Please provide
-                        comments and feedback, and I would love to talk about it with you. Thanks for helping out!
-                    </em>
-                </blockquote>
+                    {{> wip}}
                 {{/has}}
 
                 {{content}}
