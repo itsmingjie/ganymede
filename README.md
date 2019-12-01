@@ -1,4 +1,4 @@
-# 💫 Ganymede
+# 💫 Ganymede [![Codacy Badge](https://api.codacy.com/project/badge/Grade/854794f0c3c54b5c90ca4f08146c0ad0)](https://www.codacy.com/manual/jiang/ganymede?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=itsmingjie/ganymede&amp;utm_campaign=Badge_Grade)
 
 Ganymede is a content-focused, deploy-ready theme for [Ghost](http://github.com/tryghost/ghost/), designed for my personal blog [The Third Attempt](https://blog.mingjie.info).
 
@@ -6,7 +6,6 @@ The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme)
 
 ![screenshot-home](https://asset.mingjie.info/ganymede.png)
 ![screenshot-reading](https://asset.mingjie.info/ganymede-2.png)
-![screenshot-tag](https://asset.mingjie.info/ganymede-3.png)
 
 ## Improvements
 
