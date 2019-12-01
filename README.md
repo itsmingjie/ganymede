@@ -10,16 +10,16 @@ The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme)
 
 ## Improvements
 
-- [x] Better font & reading experience
-- [x] Better structure for repeating elements
-- [x] Clean-up unused and unnecessary elements
-- [x] Metadata display on post list
-- [x] Almost instant pageload via hover preload
-- [x] Support for some Ghost 3.0 features, including bookmarks
-- [x] Autodeploy to my Ghost instance via GitHub Actions
-- [x] Preview post special styling & formatting
+-   [x] Better font & reading experience
+-   [x] Better structure for repeating elements
+-   [x] Clean-up unused and unnecessary elements
+-   [x] Metadata display on post list
+-   [x] Almost instant pageload via hover preload
+-   [x] Support for some Ghost 3.0 features, including bookmarks
+-   [x] Autodeploy to my Ghost instance via GitHub Actions
+-   [x] Preview post special styling & formatting
 
-# Copyright & License
+## Copyright & License
 
 Copyright (c) 2019 Mingjie Jiang - Released under the [MIT license](LICENSE).
 
