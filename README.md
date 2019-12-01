@@ -17,6 +17,7 @@ The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme)
 - [x] Almost instant pageload via hover preload
 - [x] Support for some Ghost 3.0 features, including bookmarks
 - [x] Autodeploy to my Ghost instance via GitHub Actions
+- [x] Preview post special styling & formatting
 
 # Copyright & License
 
