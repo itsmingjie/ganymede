@@ -21,6 +21,10 @@ into the {body} of the default.hbs template --}}
                 {{/has}}
 
                 {{content}}
+                
+                {{#has tag="#preview"}}
+                    {{> wip}}
+                {{/has}}
             </div>
         </section>
 
