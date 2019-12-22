@@ -52,7 +52,7 @@
     <script>
         var links = document.links;
 
-        for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+        for (i = 0, linksLength = links.length; i < linksLength; i++) {
             if (links[i].hostname != window.location.hostname) {
                 links[i].target = '_blank';
             }
@@ -64,7 +64,15 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
     <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}" defer></script>
     <script type="text/javascript" src="{{asset "built/instantpage.js"}}" defer></script>
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/coreysnyder04/fluidbox-ghost-blog-plugin@0.1.0/fluidbox-ghost-blog-plugin.min.js"
+        async></script>
+    <script>
+        window.fluidboxGhostConfig = {
+            theme: 'image-backdrop', // Options: light, dark, image-backdrop, hsla(262, 100%, 82%, 0.6)
+            showCaption: true, // Sets whether to capture the caption and show it below the image when expanded
+        }
+    </script>
     {{!-- {{#if pagination.pages}}
     <script src="{{asset "built/infinitescroll.js"}}"></script>
     {{/if}} --}}
