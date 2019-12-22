@@ -36,17 +36,6 @@ window.fluidboxGhost = $.when(
       loader: true,
       immediateOpen: true
     })
-    .on("openstart.fluidbox", function() {
-      if (theme === "image-backdrop") {
-        var $img = $(this).find("img");
-        let imgSrc = $img.attr("src");
-        let newRule = 'background-image: url("' + imgSrc + '") !important;';
-        document.styleSheets[0].insertRule(
-          ".fluidbox__overlay::before{" + newRule + "}",
-          document.styleSheets[0].cssRules.length
-        );
-      }
-    })
     .on("openend.fluidbox", function() {
       activeImage = this;
       if (showCaption) {
