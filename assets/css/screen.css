@@ -641,7 +641,7 @@ a[target=_blank]::after {
   background-color: lightyellow;
 }
 
-#caption-overlay {
+#caption-overlay.visible {
   bottom: 3.5%;
   background-color: transparent;
 }
