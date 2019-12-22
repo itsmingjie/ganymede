@@ -640,3 +640,16 @@ a[target=_blank]::after {
 .preview__note {
   background-color: lightyellow;
 }
+
+#caption-overlay {
+  bottom: 3.5%;
+  background-color: transparent;
+}
+
+figure.fluidbox__ghost {
+  transition: opacity 0s 0s,transform .2s 0s,-webkit-transform .2s 0s;
+}
+
+figure.fluidbox--closed .fluidbox__ghost {
+  transition: opacity 0s .2s,transform .2s 0s,-webkit-transform .2s 0s;
+}
