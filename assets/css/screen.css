@@ -136,6 +136,14 @@ h6,
 .header__link:hover {
   color: rgba(0, 0, 0, 0.4);
 }
+.header__link.nav__current {
+  font-weight: bold;
+  cursor: default;
+  pointer-events: none;
+}
+.header__link.nav__current:after {
+  max-width: 200px;
+}
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
