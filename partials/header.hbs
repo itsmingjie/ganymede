@@ -4,6 +4,8 @@
     </h1>
     <span class="header__subtitle">— by&nbsp;<a href="https://mingjie.info">@itsmingjie</a></span>
     <nav class="header__nav" role="navigation">
-        <a class="header__link" href="/about">About</a>
+        {{#foreach navigation}}
+        <a class="header__link nav__{{slug}}{{#if current}} nav-current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+        {{/foreach}}
     </nav>
 </header>
