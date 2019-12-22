@@ -64,7 +64,16 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
     <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}" defer></script>
     <script type="text/javascript" src="{{asset "built/instantpage.js"}}" defer></script>
+
+    {{!-- Source: https://github.com/coreysnyder04/fluidbox-ghost-blog-plugin --}}
     <script type="text/javascript" src="{{asset "built/fluidbox.min.js"}}" defer></script>
+    <script>
+        window.fluidboxGhostConfig = {
+            theme: 'light', // Options: light, dark, image-backdrop, hsla(262, 100%, 82%, 0.6)
+            showCaption: true, // Sets whether to capture the caption and show it below the image when expanded
+        }
+    </script>
+
     {{!-- {{#if pagination.pages}}
     <script src="{{asset "built/infinitescroll.js"}}"></script>
     {{/if}} --}}
