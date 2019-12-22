@@ -10,14 +10,13 @@ window.fluidboxGhost = $.when(
   })
 ).done(function() {
   // Comment out lines depending on what you want to have flexbox triggered on
-  let targetImages = window.fluidboxGhostConfig.matchImageSelectors || [
+  let targetImages = [
     ".kg-gallery-image img", // Gallery Images
     ".kg-card img" // All Inline Images
     // 'p > img', // All images added via markdown
   ];
 
   let showCaption = true;
-
   let activeImage = null;
   // Appends a cpation to the page
   var $caption = $("<div />", { id: "caption-overlay" });
