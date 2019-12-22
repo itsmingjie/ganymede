@@ -646,10 +646,10 @@ a[target=_blank]::after {
   background-color: transparent;
 }
 
-figure.fluidbox__ghost {
+figure .fluidbox__ghost {
   transition: opacity 0s 0s,transform .2s 0s,-webkit-transform .2s 0s;
 }
 
-figure.fluidbox--closed .fluidbox__ghost {
+figure .fluidbox--closed .fluidbox__ghost {
   transition: opacity 0s .2s,transform .2s 0s,-webkit-transform .2s 0s;
 }
