@@ -26,10 +26,8 @@
             <span class="card__featured">Featured &middot; </span>
             {{/if}}
             <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-            {{^is "tag"}}
             <span class="card__tag">in <a class="card__taglink"
                     href="{{primary_tag.url}}">#{{primary_tag.name}}</a></span>
-            {{/is}}
             <span class="card__read-time">&middot; {{reading_time}}</span>
         </div>
     </div>
