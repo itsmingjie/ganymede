@@ -188,7 +188,8 @@ h6,
 }
 .date,
 .card__tag,
-.card__read-time {
+.card__read-time,
+.card__featured {
   display: inline-block;
   font-family: "Charter";
   font-size: 0.8rem;
