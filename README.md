@@ -13,10 +13,12 @@ The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme)
 -   [x] Better structure for repeating elements
 -   [x] Clean-up unused and unnecessary elements
 -   [x] Metadata display on post list
--   [x] Almost instant pageload via hover preload
+-   [x] Hover preloading via [instant.page](https://instant.page/)
 -   [x] Support for some Ghost 3.0 features, including bookmarks
 -   [x] Autodeploy to my Ghost instance via GitHub Actions
 -   [x] Preview post special styling & formatting
+-   [x] Featured post display order
+-   [x] Image lightbox via [Fluidbox](https://github.com/terrymun/Fluidbox)
 
 ## Copyright & License
 
