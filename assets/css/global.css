@@ -154,7 +154,7 @@ h6 {
 
 h1 {
   /* margin: 1.5em 0 0.6em 0; */
-  font-size: 1.45rem;
+  font-size: 1.85rem;
   /* font-family: 'charterbold'; */
   /* line-height: 1.25; */
 }
@@ -191,7 +191,7 @@ body {
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 1.34rem;
+    font-size: 1.55rem;
   }
   h2 {
     font-size: 1.14rem;
