@@ -88,7 +88,7 @@ h6,
   color: gray;
 }
 .header__subtitle a::after {
-  content: ''!important;
+  content: "" !important;
   margin: 0;
 }
 @media only screen and (max-width: 385px) {
@@ -526,8 +526,8 @@ h6,
 }
 
 .footer a::after {
-  content: ''!important;
-  margin: 0!important;
+  content: "" !important;
+  margin: 0 !important;
 }
 
 /* 12. Bookmark Card
@@ -632,7 +632,7 @@ h6,
   margin-left: 0.6em;
 }
 
-a[target=_blank]::after {
+a[target="_blank"]::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0 3px 0 5px;
 }
@@ -641,23 +641,22 @@ a[target=_blank]::after {
   background-color: lightyellow;
 }
 
-.fluidbox__wrap .fluidbox__overlay{
-  background-color: hsla(0, 0%, 100%, .85); /* Dark Theme */
-  /*background-color: hsla(0, 0%, 100%, .85); !* Light Theme See-Through *!*/
-  /*background-color: hsla(0, 0%, 15%, 0.85); !* Dark Theme See-Through *!*/
-  /*background-color: #e0e0e0; !* Light Theme *!*/
-}
 #caption-overlay {
-  bottom: 3.5%!important;
-  background-color: transparent!important;
-  opacity: 0!important;
-  -webkit-transform: none!important;
-  transform: none!important;
+  bottom: 3.5% !important;
+  background-color: transparent !important;
+  opacity: 0 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
 }
+
 #caption-overlay.visible {
-  opacity: 1!important;
+  opacity: 1 !important;
 }
-figure.fluidbox__overlay::before{
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+
+figure .fluidbox--closed .fluidbox__ghost {
+  transition: opacity 0s 0.2s, transform 0.2s 0s, -webkit-transform 0.2s 0s;
+}
+
+figure .fluidbox__ghost {
+  transition: opacity 0s 0s,transform .2s 0s,-webkit-transform .2s 0s;
 }
