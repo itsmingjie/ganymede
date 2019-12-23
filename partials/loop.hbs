@@ -1,11 +1,11 @@
 {{#get "posts" filter="featured:true"}}
 {{#foreach posts}}
-{{> card}}
+{{> card this}}
 {{/foreach}}
 {{/get}}
 
 {{#get "posts" filter="featured:false"}}
 {{#foreach posts}}
-{{> card}}
+{{> card this}}
 {{/foreach}}
 {{/get}}
