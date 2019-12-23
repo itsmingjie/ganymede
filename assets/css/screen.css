@@ -650,6 +650,12 @@ a[target=_blank]::after {
 #caption-overlay {
   bottom: 3.5%!important;
   background-color: transparent!important;
+  opacity: 0!important;
+  -webkit-transform: none!important;
+  transform: none!important;
+}
+#caption-overlay.visible {
+  opacity: 1!important;
 }
 figure.fluidbox__overlay::before{
   -webkit-transition: all .2s ease-in-out;
