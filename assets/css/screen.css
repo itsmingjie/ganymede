@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 .card__title a {
-  font-family: "Playfair Display", sans-serif !important;
+  font-family: "Playfair Display", sans-serif;
 }
 
 .post__content {
@@ -383,7 +383,7 @@ h6,
 .post__content code {
   padding: 0 5px 2px;
   font-size: 1rem;
-  font-weight: 400 !important;
+  font-weight: 400;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 3px;
 }
@@ -526,9 +526,9 @@ h6,
   font-family: "Charter", "Open Sans", serif;
 }
 
-.footer a::after {
-  content: "" !important;
-  margin: 0 !important;
+.footer a[target="_blank"]::after {
+  content: "";
+  margin: 0;
 }
 
 /* 12. Bookmark Card
@@ -642,16 +642,16 @@ a[target="_blank"]::after {
   background-color: lightyellow;
 }
 
-#caption-overlay {
-  bottom: 0 !important;
-  background-color: rgba(255,255,255,.3) !important;
-  opacity: 0 !important;
-  -webkit-transform: none !important;
-  transform: none !important;
+#caption-overlay.caption-overlay {
+  bottom: 0;
+  background-color: rgba(255,255,255,.3);
+  opacity: 0;
+  -webkit-transform: none;
+  transform: none;
 }
 
-#caption-overlay.visible {
-  opacity: 1 !important;
+#caption-overlay.caption-overlay.visible {
+  opacity: 1;
 }
 
 figure .fluidbox--closed .fluidbox__ghost {
