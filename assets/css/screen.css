@@ -648,41 +648,10 @@ a[target=_blank]::after {
   /*background-color: #e0e0e0; !* Light Theme *!*/
 }
 #caption-overlay {
-  position: fixed;
-  bottom: 3.5%;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  padding: 1rem 0;
-  background-color: transparent;
-  z-index: 1011;
-  text-align: center;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
+  bottom: 3.5%!important;
+  background-color: transparent!important;
 }
-#caption-overlay .img-caption{ color: #1d1d1d; }
-#caption-overlay.visible {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.fluidbox__overlay::before{
-  /*background-image: url('http://i.imgur.com/3qj1wfN.jpg');*/
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: .33333;
-  -webkit-filter: blur(4px);
-  filter: blur(8px);
+figure.fluidbox__overlay::before{
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
