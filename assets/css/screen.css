@@ -643,6 +643,7 @@ a[target="_blank"]::after {
 }
 
 #caption-overlay {
+  bottom: 0 !important;
   background-color: rgba(255,255,255,.3) !important;
   opacity: 0 !important;
   -webkit-transform: none !important;
