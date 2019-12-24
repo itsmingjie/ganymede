@@ -671,6 +671,10 @@ a[target="_blank"]::after {
   opacity: 1;
 }
 
+#caption-overlay .img-caption {
+  font-size: 1rem;
+}
+
 figure .fluidbox--closed .fluidbox__ghost {
   transition: opacity 0s 0.25s, transform 0.25s 0s, -webkit-transform 0.25s 0s;
   transition-timing-function: ease-in-out;
