@@ -28,8 +28,10 @@
         <div class="card__meta">
             <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
             {{^is "tag"}}
+            {{#has tag="count:>1"}}
             <span class="card__tag">in <a class="card__taglink"
                     href="{{primary_tag.url}}">#{{primary_tag.name}}</a></span>
+            {{/has}}
             {{/is}}
             <span class="card__read-time">&middot; {{reading_time}}</span>
         </div>
