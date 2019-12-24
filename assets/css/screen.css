@@ -87,8 +87,8 @@ h6,
 .header__subtitle a {
   color: gray;
 }
-.header__subtitle a::after {
-  content: "" !important;
+.header__subtitle a[target="_blank"]::after {
+  content: "";
   margin: 0;
 }
 @media only screen and (max-width: 385px) {
