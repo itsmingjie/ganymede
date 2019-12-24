@@ -2,6 +2,8 @@
 <html lang="{{@site.lang}}">
 
 <head>
+    {{!-- Eliminate FOUC --}}
+    <style>html{visibility:hidden;opacity:0;}</style>
 
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
