@@ -1,4 +1,4 @@
-{{#get "posts" filter="featured:true" include="tags" limit="all" as |featured|}}
+{{#get "posts" filter="featured:true{{is "tag"}}+primary_tag:{{tag.slug}}{{/is}}" include="tags" limit="all" as |featured|}}
 {{#foreach featured}}
     {{> card}}
 {{/foreach}}
