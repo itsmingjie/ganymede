@@ -46,8 +46,7 @@ into the {body} of the default.hbs template --}}
     </article>
 
     {{#is "post"}}
-    {{#get "posts" limit="1" filter="primary_tag:{{primary_tag.slug}}"}}
-    {{if posts.total}}
+    {{#get "posts" id="2" filter="primary_tag:{{primary_tag.slug}}"}}
     <nav class="post__footer" role="navigation">
         <div class="footer__wrapper">
             <div class="footer__wrapper-inner">
@@ -79,7 +78,6 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
     </nav>
-    {{/if}}
     {{/get}}
     {{/is}}
 </main>
