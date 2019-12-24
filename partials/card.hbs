@@ -1,3 +1,6 @@
+{{#if featured}}
+<span class="card__featured">&#9733; Featured</span>
+{{/if}}
 <article class="card" role="article">
     {{#if feature_image}}
     <div class="card__img-wrapper">
@@ -21,10 +24,7 @@
             <a href="{{url}}">{{excerpt words="33"}}
             </a>
         </div>
-        
-        {{#if featured}}
-        <span class="card__featured">&#9733; Featured</span>
-        {{/if}}
+
         <div class="card__meta">
             <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
             {{^is "tag"}}
