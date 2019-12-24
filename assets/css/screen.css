@@ -196,12 +196,20 @@ h6,
   /* margin: 0.3rem 0; */
 }
 
-.card__featured {
+.card__featured, .post__featured {
   display: inline-block;
-  font-family: "Charter";
-  font-size: 0.9rem;
+  font-family: "Playfair Display";
   color: rgba(0, 0, 0, 8);
+}
+
+.card__featured {
+  font-size: 0.9rem;
   margin-bottom: 10px;
+}
+
+.post__featured {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
 }
 
 .card__tag .card__taglink {

@@ -7,6 +7,9 @@ into the {body} of the default.hbs template --}}
 {{#post}}
 
 <main class="main_minimal" role="main">
+    {{#if featured}}
+    <span class="post__featured">★ Featured</span>
+    {{/if}}
     <article class="article__wrapper" role="article">
 
         <header>
