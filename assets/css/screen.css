@@ -663,6 +663,8 @@ a[target="_blank"]::after {
   opacity: 0;
   -webkit-transform: none;
   transform: none;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 #caption-overlay.caption-overlay.visible {
@@ -670,9 +672,11 @@ a[target="_blank"]::after {
 }
 
 figure .fluidbox--closed .fluidbox__ghost {
-  transition: opacity 0s 0.2s, transform 0.2s 0s, -webkit-transform 0.2s 0s;
+  transition: opacity 0s 0.25s, transform 0.25s 0s, -webkit-transform 0.25s 0s;
+  transition-timing-function: ease-in-out;
 }
 
 figure .fluidbox__ghost {
-  transition: opacity 0s 0s,transform .2s 0s,-webkit-transform .2s 0s;
+  transition: opacity 0s 0s,transform .25s 0s,-webkit-transform .25s 0s;
+  transition-timing-function: ease-in-out;
 }
