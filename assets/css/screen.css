@@ -188,13 +188,20 @@ h6,
 }
 .date,
 .card__tag,
-.card__read-time,
-.card__featured {
+.card__read-time {
   display: inline-block;
   font-family: "Charter";
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.58);
   /* margin: 0.3rem 0; */
+}
+
+.card__featured {
+  display: inline-block;
+  font-family: "Charter";
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 8);
+  margin-bottom: 10px;
 }
 
 .card__tag .card__taglink {

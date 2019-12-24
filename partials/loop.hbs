@@ -1,11 +1,11 @@
 {{#get "posts" filter="featured:true" limit="all" as |featured|}}
 {{#foreach featured}}
-    {{> card this}}
+    {{> card}}
 {{/foreach}}
 {{/get}}
 
 {{#foreach posts}}
     {{^if featured}}
-        {{> card this}}
+        {{> card}}
     {{/if}}
 {{/foreach}}
