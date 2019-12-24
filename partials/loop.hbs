@@ -1,15 +1,11 @@
-{{is "tag"}}
-{{#get "posts" filter="featured:true+primary_tag:{{tag.slug}}" include="tags" limit="all" as |featured|}}
-{{#foreach featured}}
-{{> card}}
-{{/foreach}}
-{{/get}}
-{{else}}
+{{^is "tag"}}
+
 {{#get "posts" filter="featured:true" include="tags" limit="all" as |featured|}}
 {{#foreach featured}}
 {{> card}}
 {{/foreach}}
 {{/get}}
+
 {{/is}}
 
 {{#foreach posts}}

@@ -5,7 +5,9 @@ into the {body} of the default.hbs template --}}
 
 <main class="main_minimal" role="main">
     <h1 class="tag__title">#{{tag.name}}</h1>
-    {{> loop}}
+    {{#foreach posts}}
+    {{> card}}
+    {{/foreach}}
 </main>
 
 {{!-- Extremely stupid way to approach "or" operator --}}
