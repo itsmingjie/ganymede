@@ -20,13 +20,13 @@ into the {body} of the default.hbs template --}}
         <section class="post__content-wrapper">
             <div class="post__content">
                 {{#has tag="#preview"}}
-                    {{> wip}}
+                {{> wip}}
                 {{/has}}
 
                 {{content}}
-                
+
                 {{#has tag="#preview"}}
-                    {{> wip}}
+                {{> wip}}
                 {{/has}}
             </div>
         </section>
@@ -45,12 +45,15 @@ into the {body} of the default.hbs template --}}
 
     </article>
 
+    {{is "post"}}
+    {{#get "posts" limit="1" filter="primary_tag:{{primary_tag.slug}}"}}
+    {{^if {{posts.total}}}}
     <nav class="post__footer" role="navigation">
         <div class="footer__wrapper">
             <div class="footer__wrapper-inner">
-                
+
                 <div class="footer__link-prev">
-                {{#prev_post in="primary_tag"}}
+                    {{#prev_post in="primary_tag"}}
                     <a class="footer__link-anchor" href="{{url}}" rel="prev">
                         <object class="footer__link-icon-left">
                             <embed src="{{asset "icons/arrow-left.svg"}}" />
@@ -58,7 +61,7 @@ into the {body} of the default.hbs template --}}
                         <p class="footer__link-label">Previous</p>
                         <h3 class="footer__title-article">{{title}}</h3>
                     </a>
-                {{/prev_post}}
+                    {{/prev_post}}
                 </div>
 
                 {{#next_post in="primary_tag"}}
@@ -76,6 +79,9 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
     </nav>
+    {{/if}}
+    {{/get}}
+    {{/is}}
 </main>
 
 {{/post}}
