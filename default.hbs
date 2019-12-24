@@ -2,8 +2,6 @@
 <html lang="{{@site.lang}}">
 
 <head>
-    {{!-- Eliminate FOUC --}}
-    <style>html{visibility:hidden;opacity:0;}</style>
 
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -29,7 +27,7 @@
 
 </head>
 
-<body class="{{body_class}}">
+<body class="{{body_class}} preload">
 
     <div class="wrapper_minimal">
 
@@ -62,6 +60,12 @@
         }
     </script>
 
+    <script>
+        $(window).load(function () {
+            $("body").removeClass("preload");
+        });
+    </script>
+
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
@@ -70,7 +74,7 @@
 
     {{!-- Source: https://github.com/coreysnyder04/fluidbox-ghost-blog-plugin --}}
     <script type="text/javascript" src="{{asset "built/fluidbox.min.js"}}" defer></script>
-    <script>window.fluidboxGhostConfig = {theme: 'light',showCaption: true}</script>
+    <script>window.fluidboxGhostConfig = { theme: 'light', showCaption: true }</script>
     {{!-- {{#if pagination.pages}}
     <script src="{{asset "built/infinitescroll.js"}}"></script>
     {{/if}} --}}
