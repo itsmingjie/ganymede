@@ -46,8 +46,6 @@ into the {body} of the default.hbs template --}}
     </article>
 
     {{is "post"}}
-    {{#get "posts" limit="1" filter="primary_tag:{{primary_tag.slug}}"}}
-    {{#foreach posts}}
     <nav class="post__footer" role="navigation">
         <div class="footer__wrapper">
             <div class="footer__wrapper-inner">
@@ -79,8 +77,6 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
     </nav>
-    {{/foreach}}
-    {{/get}}
     {{/is}}
 </main>
 
