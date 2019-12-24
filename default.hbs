@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="{{body_class}} preload">
+<body class="{{body_class}}">
 
     <div class="wrapper_minimal">
 
@@ -58,12 +58,6 @@
                 links[i].rel = 'noopener';
             }
         }
-    </script>
-
-    <script>
-        $(window).load(function () {
-            $("body").removeClass("preload");
-        });
     </script>
 
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
