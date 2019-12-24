@@ -47,7 +47,7 @@ into the {body} of the default.hbs template --}}
 
     {{is "post"}}
     {{#get "posts" limit="1" filter="primary_tag:{{primary_tag.slug}}"}}
-    {{^if posts.total}}
+    {{#foreach posts}}
     <nav class="post__footer" role="navigation">
         <div class="footer__wrapper">
             <div class="footer__wrapper-inner">
@@ -79,7 +79,7 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
     </nav>
-    {{/if}}
+    {{/foreach}}
     {{/get}}
     {{/is}}
 </main>
