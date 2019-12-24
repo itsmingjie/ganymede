@@ -601,6 +601,10 @@ a.kg-bookmark-container[target="_blank"]::after {
   line-height: 1.4;
   margin-top: 12px;
   overflow-y: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .kg-bookmark-thumbnail {
   position: relative;
