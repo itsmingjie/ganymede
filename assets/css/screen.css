@@ -698,3 +698,8 @@ figure .fluidbox__ghost {
   transition: opacity 0s 0s, transform 0.25s 0s, -webkit-transform 0.25s 0s;
   transition-timing-function: ease-in-out;
 }
+
+html {
+  visibility: visible;
+  opacity: 1;
+}
