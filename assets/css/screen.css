@@ -196,7 +196,8 @@ h6,
   /* margin: 0.3rem 0; */
 }
 
-.card__featured, .post__featured {
+.card__featured,
+.post__featured {
   display: inline-block;
   font-family: "Playfair Display";
   color: rgba(0, 0, 0, 8);
@@ -548,7 +549,111 @@ h6,
 
 /* 12. Bookmark Card
 /* -------------------------------------------------------- */
+.kg-bookmark-card {
+  width: 100%;
+  padding: 0 !important;
+  margin: 30px auto !important;
+  background: var(--background-color);
+}
+@media only screen and (min-width: 48rem) {
+  .kg-bookmark-card {
+    margin: 40px auto !important;
+  }
+}
+.kg-card + .kg-bookmark-card {
+  margin-top: 0;
+}
 
+a.kg-bookmark-container {
+  display: flex;
+  color: var(--primary-foreground-color);
+  text-decoration: none;
+  min-height: 148px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  border-radius: 3px;
+}
+
+a.kg-bookmark-container[target="_blank"]::after {
+  content: none;
+  margin: 0;
+}
+
+a.kg-bookmark-container[target="_blank"]::after {
+  content: none;
+  margin: 0;
+}
+.kg-bookmark-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.kg-bookmark-title {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.kg-bookmark-description {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 12px;
+  overflow-y: hidden;
+}
+.kg-bookmark-thumbnail {
+  position: relative;
+  min-width: 30%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.kg-bookmark-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 0 3px 3px 0;
+}
+.kg-bookmark-metadata {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #9b9b9b;
+  margin-top: 14px;
+}
+.kg-bookmark-icon {
+  width: 22px !important;
+  height: 22px !important;
+  margin-right: 8px !important;
+}
+.kg-bookmark-author:after {
+  content: "•";
+  margin: 0 6px;
+}
+.kg-bookmark-publisher {
+  color: inherit;
+}
+@media (max-width: 500px) {
+  .kg-bookmark-container {
+    flex-direction: column;
+  }
+  .kg-bookmark-thumbnail {
+    order: 1;
+    width: 100%;
+    min-height: 160px;
+  }
+  .kg-bookmark-thumbnail img {
+    border-radius: 3px 3px 0 0;
+  }
+  .kg-bookmark-content {
+    order: 2;
+  }
+}
 
 /* 13. Others
 /* -------------------------------------------------------- */
@@ -564,12 +669,12 @@ a[target="_blank"]::after {
 
 #caption-overlay.caption-overlay {
   bottom: 0;
-  background-color: rgba(255,255,255,.3);
+  background-color: rgba(255, 255, 255, 0.3);
   opacity: 0;
   -webkit-transform: none;
   transform: none;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 #caption-overlay.caption-overlay.visible {
@@ -586,6 +691,6 @@ figure .fluidbox--closed .fluidbox__ghost {
 }
 
 figure .fluidbox__ghost {
-  transition: opacity 0s 0s,transform .25s 0s,-webkit-transform .25s 0s;
+  transition: opacity 0s 0s, transform 0.25s 0s, -webkit-transform 0.25s 0s;
   transition-timing-function: ease-in-out;
 }
