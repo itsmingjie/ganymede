@@ -1,11 +1,19 @@
-{{#get "posts" filter="featured:true{{is "tag"}}+primary_tag:{{tag.slug}}{{/is}}" include="tags" limit="all" as |featured|}}
+{{is "tag"}}
+{{#get "posts" filter="featured:true+primary_tag:{{tag.slug}}" include="tags" limit="all" as |featured|}}
 {{#foreach featured}}
-    {{> card}}
+{{> card}}
 {{/foreach}}
 {{/get}}
+{{else}}
+{{#get "posts" filter="featured:true" include="tags" limit="all" as |featured|}}
+{{#foreach featured}}
+{{> card}}
+{{/foreach}}
+{{/get}}
+{{/is}}
 
 {{#foreach posts}}
-    {{^if featured}}
-        {{> card}}
-    {{/if}}
+{{^if featured}}
+{{> card}}
+{{/if}}
 {{/foreach}}
