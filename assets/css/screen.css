@@ -673,7 +673,7 @@ a[target="_blank"]::after {
 
 #caption-overlay.caption-overlay {
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   opacity: 0;
   -webkit-transform: none;
   transform: none;
