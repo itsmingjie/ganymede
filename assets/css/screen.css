@@ -197,7 +197,7 @@ h6,
 }
 
 .card__featured,
-.post__featured {
+.post__pre {
   display: inline-block;
   font-family: "Playfair Display";
   color: rgba(0, 0, 0, 8);
@@ -208,7 +208,7 @@ h6,
   margin-bottom: 10px;
 }
 
-.post__featured {
+.post__pre {
   font-size: 1rem;
   margin-bottom: 15px;
 }
