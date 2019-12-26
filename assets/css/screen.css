@@ -673,16 +673,20 @@ a[target="_blank"]::after {
 
 #caption-overlay.caption-overlay {
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.75);
   opacity: 0;
   -webkit-transform: none;
   transform: none;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 #caption-overlay.caption-overlay.visible {
   opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 #caption-overlay .img-caption {
