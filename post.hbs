@@ -32,18 +32,10 @@ into the {body} of the default.hbs template --}}
         </section>
 
         {{#if tags}}
-        <div class="posttags_uber">
-            Tags: {{tags separator=" | "}}
+        <div class="post__tags">
+            Tags: {{tags separator=", "}}
         </div>
         {{/if}}
-
-        {{subscribe_form
-            form_class="sub__form"
-            input_class="sub__input"
-            button_class="sub__button"
-            placeholder="Your email address"
-            autofocus="true"
-        }}
 
         {{!-- <footer>
             <h4>Share</h4>

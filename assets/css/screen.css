@@ -338,6 +338,12 @@ h6,
   max-width: 100%;
   margin: 0 auto;
 }
+.post__tags {
+  font-size: .8rem;
+}
+.post__tags a {
+  text-decoration: underline;
+}
 .kg-image-card.kg-width-wide {
   min-width: 100%;
   max-width: 65vw;
