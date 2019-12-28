@@ -8,7 +8,8 @@ $('#subscribe__submit').click(() => {
         type:'post',
         data:$('#subscribe__form').serialize(),
         success:function(){
-            $("#subscribe__form").html("Thanks for subscribing!")
+            $("#subscribe__form").hide()
+            $("#subscribe__title").text("Thanks for subscribing!")
         }
     })
 })
