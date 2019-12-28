@@ -35,11 +35,13 @@ into the {body} of the default.hbs template --}}
             </div>
         </section>
 
+        {{is "post"}}
         {{#if tags}}
         <div class="post__tags">
             Tags: {{tags separator=", "}}
         </div>
         {{/if}}
+        {{/is}}
 
         {{!-- <footer>
             <h4>Share</h4>
