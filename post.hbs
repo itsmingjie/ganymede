@@ -7,12 +7,13 @@ into the {body} of the default.hbs template --}}
 {{#post}}
 
 <main class="main_minimal" role="main">
-    
+
     <div class="post__pre">
-        <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{^is "post"}}Last Updated: {{/is}}{{date}}</time>
+        <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{^is "post"}}Last Updated:
+            {{/is}}{{date}}</time>
         {{#if featured}}<span class="post__featured"> | ★ Featured</span>{{/if}}
     </div>
-    
+
     <article class="article__wrapper" role="article">
 
         <header>
@@ -47,6 +48,10 @@ into the {body} of the default.hbs template --}}
         </footer> --}}
 
     </article>
+
+    {{#has tag="#subscribe"}}
+        {{> subscribe}}
+    {{/has}}
 
     {{!-- {{#is "post"}}
     <nav class="post__footer" role="navigation">
