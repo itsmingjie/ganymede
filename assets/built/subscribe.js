@@ -4,8 +4,8 @@
 
 $("#subscribe__submit").click(() => {
   if (
-    $(".subscribe__input")[0].val() != "" &&
-    isEmail($(".subscribe__input")[0].val())
+    $(".subscribe__input").eq(0).val() != "" &&
+    isEmail($(".subscribe__input").eq(1).val())
   ) {
     $.ajax({
       url: "https://hooks.zapier.com/hooks/catch/2085782/otichcc/",
@@ -16,6 +16,12 @@ $("#subscribe__submit").click(() => {
         $("#subscribe__title").text("Thanks for subscribing!");
       }
     });
+  } else {
+    if ($(".subscribe__input").eq(0).val() == "") {
+        $(".subscribe__input").eq(0).css("border-bottom", "1px solid #FF0000;")
+    } else {
+        $(".subscribe__input").eq(1).css("border-bottom", "1px solid #FF0000;")
+    }
   }
 });
 
