@@ -16,12 +16,6 @@ $("#subscribe__submit").click(() => {
         $("#subscribe__title").text("Thanks for subscribing!");
       }
     });
-  } else {
-    if ($(".subscribe__input").eq(0).val() == "") {
-        $(".subscribe__input").eq(0).css("border-bottom", "1px solid #FF0000;")
-    } else {
-        $(".subscribe__input").eq(1).css("border-bottom", "1px solid #FF0000;")
-    }
   }
 });
 
