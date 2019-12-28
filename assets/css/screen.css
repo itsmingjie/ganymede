@@ -721,7 +721,7 @@ figure .fluidbox__ghost {
 @media (max-width: 500px) {
   .subscribe__form {
     grid-template-columns: 1fr;
-    grid-gap: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -732,7 +732,6 @@ figure .fluidbox__ghost {
   width: 100%;
   box-sizing: border-box;
   background: #fff;
-  transition: all 0.1s ease-in-out;
   padding: 5px 0;
   font-size: 0.8rem;
   font-family: "Charter";
@@ -742,7 +741,7 @@ figure .fluidbox__ghost {
   background-color: transparent;
   border: .1px solid #eee;
   padding: 10px 30px;
-  transition: all 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s ease-in-out;
   border-radius: 3px;
   font-size: 0.8rem;
   font-family: "Playfair Display";
@@ -750,7 +749,6 @@ figure .fluidbox__ghost {
 }
 
 .subscribe__submit:hover {
-  border: 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
 }
 
