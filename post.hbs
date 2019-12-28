@@ -35,7 +35,7 @@ into the {body} of the default.hbs template --}}
             </div>
         </section>
 
-        {{is "post"}}
+        {{#is "post"}}
         {{#if tags}}
         <div class="post__tags">
             Tags: {{tags separator=", "}}
