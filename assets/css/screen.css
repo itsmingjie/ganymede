@@ -558,7 +558,7 @@ h6,
 .kg-bookmark-card {
   width: 100%;
   padding: 0 !important;
-  margin: 30px auto !important;
+  margin: 10px auto !important;
   background: var(--background-color);
 }
 @media only screen and (min-width: 48rem) {
