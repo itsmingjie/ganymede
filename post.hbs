@@ -9,8 +9,11 @@ into the {body} of the default.hbs template --}}
 <main class="main_minimal" role="main">
 
     <div class="post__pre">
+        
+        {{^has tag="#nodate"}}
         <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{^is "post"}}Last Updated:
             {{/is}}{{date}}</time>
+        {{/has}}
         {{#if featured}}<span class="post__featured"> | ★ Featured</span>{{/if}}
     </div>
 
