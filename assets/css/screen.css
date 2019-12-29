@@ -600,6 +600,11 @@ a.kg-bookmark-container[target="_blank"]::after {
   font-size: 1.125rem;
   line-height: 1.3;
   font-weight: 600;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .kg-bookmark-description {
   font-size: 0.875rem;
