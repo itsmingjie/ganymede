@@ -402,6 +402,9 @@ h6,
 .post__content pre code {
   background: transparent;
 }
+.post__content pre code span.token {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
 .post__content code {
   padding: 0 5px 2px;
   font-size: 1rem;
