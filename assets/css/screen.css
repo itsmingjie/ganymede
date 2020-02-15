@@ -401,6 +401,7 @@ h6,
 }
 .post__content pre code {
   background: transparent;
+  font-size: 1rem;
 }
 .post__content pre code span.token {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
