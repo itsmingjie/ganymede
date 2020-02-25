@@ -340,6 +340,7 @@ h6,
 }
 .post__tags {
   font-size: 0.8rem;
+  text-align: right;
 }
 .post__tags a {
   text-decoration: underline;
@@ -762,5 +763,8 @@ figure .fluidbox__ghost {
 }
 
 .subscribe__divider {
-  margin-bottom: 2rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: monospace;
 }

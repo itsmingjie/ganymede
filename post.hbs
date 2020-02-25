@@ -38,6 +38,8 @@ into the {body} of the default.hbs template --}}
             </div>
         </section>
 
+        <p class="subscribe__divider">//</p>
+
         {{#is "post"}}
         {{#if tags}}
         <div class="post__tags">
@@ -54,9 +56,13 @@ into the {body} of the default.hbs template --}}
 
     </article>
 
+    {{!-- 
+    
     {{#has tag="#subscribe"}}
         {{> subscribe}}
     {{/has}}
+
+    --}}
 
     {{!-- {{#is "post"}}
     <nav class="post__footer" role="navigation">
