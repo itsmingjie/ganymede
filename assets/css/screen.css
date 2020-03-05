@@ -121,8 +121,10 @@ h6,
   left: 0;
   width: 100%;
   max-width: 0;
-  height: 1px;
-  background-color: currentColor;
+  /* height: 1px; */
+  /* background-color: currentColor; */
+  background-color: transparent;
+  border-bottom: 1px solid black;
   transition: max-width 0.4s ease-in-out;
 }
 .header__link:hover:after {
@@ -681,6 +683,21 @@ img.kg-bookmark-icon {
 a[target="_blank"]::after {
   content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
   margin: 0 3px 0 5px;
+}
+
+a.header__link[target="_blank"]::after {
+  margin: 0;
+  content: '';
+}
+
+a.header__link[target="_blank"]::before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  position: absolute;
+  right: -15px;
+}
+
+a.header__link[target="_blank"]:hover::after {
+  max-width: 200px;
 }
 
 .preview__note {
