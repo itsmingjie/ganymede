@@ -26,6 +26,8 @@ into the {body} of the default.hbs template --}}
 
         <section class="post__content-wrapper">
             <div class="post__content">
+                <img src="{{feature_image}}" class="kg-image post__feature-image" />
+
                 {{#has tag="#preview"}}
                 {{> wip}}
                 {{/has}}
