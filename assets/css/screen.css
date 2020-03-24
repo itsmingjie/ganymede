@@ -344,9 +344,10 @@ h6,
   max-width: 100%;
   margin: 0 auto;
 }
-.post__tags {
+.post__tags, .post__permalink {
   font-size: 0.8rem;
   text-align: right;
+  margin-top: 5px;
 }
 .post__tags a {
   text-decoration: underline;

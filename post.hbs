@@ -47,6 +47,9 @@ into the {body} of the default.hbs template --}}
         <div class="post__tags">
             Tags: {{tags separator=", "}}
         </div>
+        <div class="post__permalink">
+            Permalink: <input value="{{url}}" onClick="this.setSelectionRange(0, this.value.length)" />
+        </div>
         {{/if}}
         {{/is}}
 
