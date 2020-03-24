@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A content-focused, deploy-ready theme for Ghost.",
   "main": "index.js",
+  "engines": {
+    "ghost-api": "v3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +20,9 @@
     "email": "jiang@mingjie.info",
     "url": "http://mingjie.info"
   },
+  "contributors": [
+    "Craig Hart <i@craigary.net> (https://craigary.net)"
+  ],
   "gpm": {
     "type": "theme",
     "categories": [
