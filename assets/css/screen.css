@@ -76,7 +76,7 @@ h6,
   margin: 0;
 }
 .header__title a.site__title {
-  color: #1c2437;
+  color: var(--text-color);
   /* font-weight: bold; */
   /* font-family: 'Source Serif Pro', serif; */
   font-family: "Playfair Display", serif;
@@ -189,7 +189,7 @@ h6,
   font-size: 1.08rem;
 }
 .card__desc a {
-  color: var(--link-color-dimmed);
+  color: var(--text-color);
   /* font-family: 'Charter'; */
 }
 .date,
