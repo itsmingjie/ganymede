@@ -74,7 +74,7 @@ iframe {
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+:root {
   --link-color: rgba(0, 0, 0, .84);
   --link-color-dimmed: rgba(0, 0, 0, .4);
   --text-color: rgba(0, 0, 0, .8);
@@ -82,9 +82,27 @@ html {
   --background-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --block-background-color: rgba(0, 0, 0, 0.05);
+  --toggle-icon: '🌙';
 }
 
-html[data-theme='dark'] {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+
+  :root:not([data-user-color-scheme]) {
+    --link-color: rgba(255, 255, 255,.9);
+    --link-color-dimmed: rgba(255, 255, 255, .4);
+    --text-color: rgba(255, 255, 255, 1);
+    --hint-color: #8492a6;
+    --background-color: #121217;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --block-background-color: rgba(255, 255, 255, 0.05);
+    --toggle-icon: '🌞';
+  }
+}
+
+[data-user-color-scheme='dark'] {
   --link-color: rgba(255, 255, 255,.9);
   --link-color-dimmed: rgba(255, 255, 255, .4);
   --text-color: rgba(255, 255, 255, 1);
@@ -92,14 +110,11 @@ html[data-theme='dark'] {
   --background-color: #121217;
   --shadow-color: rgba(255, 255, 255, 0.1);
   --block-background-color: rgba(255, 255, 255, 0.05);
+  --toggle-icon: '🌞';
 }
 
-html > .light__toggle {
-  display: none;
-}
-
-html[data-theme='dark'] > .dark__toggle {
-  display: none;
+.theme__toggle::after {
+  content: var(--toggle-icon);
 }
 
 body {
