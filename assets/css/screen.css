@@ -427,6 +427,9 @@ h6,
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
+.footer__divider {
+  text-align: center;
+}
 .footer__wrapper {
   width: 100%;
 }
