@@ -429,6 +429,7 @@ h6,
 }
 .footer__divider {
   text-align: center;
+  font-size: .95rem;
 }
 .footer__wrapper {
   width: 100%;
