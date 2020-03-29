@@ -7,22 +7,19 @@ into the {body} of the default.hbs template --}}
 {{#post}}
 
 <main class="main_minimal" role="main">
-
-    <div class="post__pre">
-        
-        {{^has tag="#nodate"}}
-        <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{^is "post"}}Last Updated:
-            {{/is}}{{date}}</time>
-        {{/has}}
-        {{#if featured}}<span class="post__featured"> | ★ Featured</span>{{/if}}
-    </div>
-
     <article class="article__wrapper" role="article">
-
         <header>
             <h1 class="post__title">{{title}}</h1>
             {{!-- <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> --}}
         </header>
+
+        <div class="post__pre">
+            {{^has tag="#nodate"}}
+            <time class="post__date" datetime="{{date format="YYYY-MM-DD"}}">{{^is "post"}}Last Updated:
+                {{/is}}{{date}}</time>
+            {{/has}}
+            {{#if featured}}<span class="post__featured"> | ★ Featured</span>{{/if}}
+        </div>
 
         <section class="post__content-wrapper">
             <div class="post__content">
