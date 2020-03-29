@@ -113,8 +113,13 @@ iframe {
   --toggle-icon: '🌞';
 }
 
+.theme__toggle:hover {
+  opacity: 1;
+}
+
 .theme__toggle::after {
   content: var(--toggle-icon);
+  border-bottom: none!important;
 }
 
 body {
@@ -227,7 +232,7 @@ hr {
   /* padding: 0; */
   height: 1px;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  border-top: 1px solid var(--hint-color);
 }
 
 body {

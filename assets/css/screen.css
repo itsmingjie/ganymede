@@ -206,7 +206,7 @@ h6,
 .post__pre {
   display: inline-block;
   font-family: "Playfair Display";
-  color: rgba(0, 0, 0, 8);
+  color: var(--text-color);
 }
 
 .card__featured {
