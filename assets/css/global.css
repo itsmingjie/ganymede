@@ -73,11 +73,37 @@ iframe {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+
+html {
+  --link-color: rgba(0, 0, 0, .84);
+  --link-color-dimmed: rgba(0, 0, 0, .4);
+  --text-color: rgba(0, 0, 0, .8);
+  --hint-color: #8a8e99;
+  --background-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --block-background-color: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme='dark'] {
+  --link-color: rgba(255, 255, 255,.9);
+  --link-color-dimmed: rgba(255, 255, 255, .4);
+  --text-color: rgba(0, 0, 0, 1);
+  --hint-color: #8492a6;
+  --background-color: #121217;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --block-background-color: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 a {
   text-decoration: none;
   transition: all .4s ease-in-out;
   /* color: #0080ff; */
-  color: rgba(0,0,0,.84);
+  color: var(--link-color);
 }
 
 audio,
@@ -184,7 +210,7 @@ hr {
 body {
   font-size: 1.24rem;
   line-height: 1.54;
-  color: rgba(0,0,0,.8);
+  color: var(--text-color);
   text-rendering: optimizeLegibility;
 }
 
