@@ -686,7 +686,7 @@ img.kg-bookmark-icon {
 /* -------------------------------------------------------- */
 
 a[target="_blank"]::after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  content: var(--ext-icon);
   margin: 0 3px 0 5px;
 }
 
@@ -696,7 +696,7 @@ a.header__link[target="_blank"]::after {
 }
 
 a.header__link[target="_blank"]::before {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  content: var(--ext-icon);
   position: absolute;
   right: -15px;
 }
