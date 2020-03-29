@@ -123,6 +123,7 @@ iframe {
 .theme__toggle::after {
   content: var(--toggle-icon);
   border-bottom: none!important;
+  opacity: 1;
 }
 
 body {
