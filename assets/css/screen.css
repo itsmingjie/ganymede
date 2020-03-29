@@ -324,10 +324,10 @@ h6,
   /* box-shadow: #1c2437 0px -0.5px 0px inset; */
   /* color: var(--shadow-color) */
 
-  box-shadow: inset 0px -0.5px 0px var(--shadow-color);
+  box-shadow: inset 0px -0.5px 0px var(--link-color-dimmed);
   -webkit-appearance: none;
-  -webkit-box-shadow: inset 0px -1px 0px var(--shadow-color);
-  -moz-box-shadow: inset 0px -1px 0px var(--shadow-color);
+  -webkit-box-shadow: inset 0px -1px 0px var(--link-color-dimmed);
+  -moz-box-shadow: inset 0px -1px 0px var(--link-color-dimmed);
 }
 
 /* IMG */
