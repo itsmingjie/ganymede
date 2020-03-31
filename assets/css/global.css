@@ -83,16 +83,11 @@ iframe {
   --background-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --block-background-color: rgba(0, 0, 0, 0.05);
-  --ext-icon: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==');
-  --toggle-icon: '🌙';
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: 'dark';
-  }
-
-  :root:not([data-user-color-scheme]) {
     --link-color: rgba(255, 255, 255,.9);
     --link-color-dimmed: rgba(255, 255, 255, .4);
     --text-color: rgba(255, 255, 255, 1);
@@ -101,32 +96,7 @@ iframe {
     --background-color: #121217;
     --shadow-color: rgba(255, 255, 255, 0.1);
     --block-background-color: rgba(255, 255, 255, 0.05);
-    --ext-icon: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASUlEQVQoU5WQwQ4AIAhC4/8/2rJmQ5NDHuUNBhjizMxYwvMAEABrGwSJHeS/FkxOwGGqY4UiIYEKaqO7BO8gy3Cpf1CNfous+SZoSE/7IpEx6wAAAABJRU5ErkJggg==');
-    --toggle-icon: '🌞';
   }
-}
-
-[data-user-color-scheme='dark'] {
-  --link-color: rgba(255, 255, 255,.9);
-  --link-color-dimmed: rgba(255, 255, 255, .4);
-  --text-color: rgba(255, 255, 255, 1);
-  --overlay-color: rgba(0, 0, 0, .85);
-  --hint-color: #8492a6;
-  --background-color: #121217;
-  --shadow-color: rgba(255, 255, 255, 0.1);
-  --block-background-color: rgba(255, 255, 255, 0.05);
-  --ext-icon: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASUlEQVQoU5WQwQ4AIAhC4/8/2rJmQ5NDHuUNBhjizMxYwvMAEABrGwSJHeS/FkxOwGGqY4UiIYEKaqO7BO8gy3Cpf1CNfous+SZoSE/7IpEx6wAAAABJRU5ErkJggg==');
-  --toggle-icon: '🌞';
-}
-
-.theme__toggle:hover {
-  opacity: 1;
-}
-
-.theme__toggle::before {
-  content: var(--toggle-icon);
-  border-bottom: none!important;
-  opacity: 1;
 }
 
 body {
