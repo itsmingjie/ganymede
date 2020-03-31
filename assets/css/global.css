@@ -120,7 +120,7 @@ iframe {
   opacity: 1;
 }
 
-.theme__toggle::after {
+.theme__toggle::before {
   content: var(--toggle-icon);
   border-bottom: none!important;
   opacity: 1;

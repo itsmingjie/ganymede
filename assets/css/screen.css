@@ -689,26 +689,6 @@ img.kg-bookmark-icon {
 /* 13. Others
 /* -------------------------------------------------------- */
 
-a[target="_blank"]::after {
-  content: var(--ext-icon);
-  margin: 0 3px 0 5px;
-}
-
-a.header__link[target="_blank"]::after {
-  margin: 0;
-  content: '';
-}
-
-a.header__link[target="_blank"]::before {
-  content: var(--ext-icon);
-  position: absolute;
-  right: -15px;
-}
-
-a.header__link[target="_blank"]:hover::after {
-  max-width: 200px;
-}
-
 .preview__note {
   background-color: lightyellow;
 }

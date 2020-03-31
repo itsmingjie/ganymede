@@ -14,7 +14,7 @@ const getCSSCustomProp = propKey => {
 };
 
 const applySetting = passedSetting => {
-  let currentSetting = passedSetting || localStorage.getItem(STORAGE_KEY);
+  let currentSetting = passedSetting || sessionStorage.getItem(STORAGE_KEY);
 
   if (currentSetting) {
     document.documentElement.setAttribute('data-user-color-scheme', currentSetting);
@@ -22,7 +22,7 @@ const applySetting = passedSetting => {
 };
 
 const toggleSetting = () => {
-  let currentSetting = localStorage.getItem(STORAGE_KEY);
+  let currentSetting = sessionStorage.getItem(STORAGE_KEY);
 
   switch (currentSetting) {
     case null:
@@ -36,7 +36,7 @@ const toggleSetting = () => {
       break;
   }
 
-  localStorage.setItem(STORAGE_KEY, currentSetting);
+  sessionStorage.setItem(STORAGE_KEY, currentSetting);
 
   return currentSetting;
 };
