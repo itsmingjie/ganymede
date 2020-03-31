@@ -695,7 +695,7 @@ img.kg-bookmark-icon {
 
 #caption-overlay.caption-overlay {
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: var(--overlay-color);
   opacity: 0;
   -webkit-transform: none;
   transform: none;
@@ -713,6 +713,7 @@ img.kg-bookmark-icon {
 
 #caption-overlay .img-caption {
   font-size: 1rem;
+  color: var(--text-color);
 }
 
 figure .fluidbox--closed .fluidbox__ghost {
