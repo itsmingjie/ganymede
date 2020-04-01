@@ -44,7 +44,12 @@ into the {body} of the default.hbs template --}}
         {{#is "post"}}
         {{#if tags}}
         <div class="post__tags">
-            Tags: {{tags separator=", "}}
+            Tags: 
+            {{#get "tags" filter="slug:-[blog,project]"}}
+                {{#foreach tags}}
+                    <a href="{{url}}">{{name}}</a>
+                {{/foreach}}
+            {{/get}}
         </div>
         <div class="post__permalink">
             Permalink: <input value="{{url absolute='true'}}" onClick="this.setSelectionRange(0, this.value.length)" />
