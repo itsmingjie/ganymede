@@ -27,13 +27,6 @@ into the {body} of the default.hbs template --}}
     {{/foreach}}
 </main>
 
-{{!-- Extremely stupid way to approach "or" operator --}}
-{{#if prev}}
-    {{> pagination}}
-{{else}}
-    {{#if next}}
-        {{> pagination}}
-    {{/if}}
-{{/if}}
+{{pagination}}
 
 {{> footer}}
