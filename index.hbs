@@ -22,7 +22,9 @@ into the {body} of the default.hbs template --}}
 
     <hr />
 
-    {{> loop}}
+    {{#foreach posts}}
+        {{> card-blog}}
+    {{/foreach}}
 </main>
 
 {{!-- Extremely stupid way to approach "or" operator --}}

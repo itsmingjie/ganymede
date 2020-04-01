@@ -1,6 +1,3 @@
-{{#if featured}}
-<span class="card__featured">&#9733; Featured</span>
-{{/if}}
 <article class="card" role="article">
     {{#if feature_image}}
     <div class="card__img-wrapper">
@@ -27,13 +24,15 @@
 
         <div class="card__meta">
             <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-            {{^is "tag"}}
-            {{#has tag="count:>0"}}
-            <span class="card__tag">in <a class="card__taglink"
-                    href="{{primary_tag.url}}">#{{primary_tag.name}}</a></span>
+            {{#has tag="blog"}}
+                {{^is "tag"}}
+                    {{#has tag="count:>0"}}
+                    <span class="card__tag">in <a class="card__taglink"
+                            href="{{primary_tag.url}}">#{{primary_tag.name}}</a></span>
+                    {{/has}}
+                {{/is}}
+                <span class="card__read-time">&middot; {{reading_time}}</span>
             {{/has}}
-            {{/is}}
-            <span class="card__read-time">&middot; {{reading_time}}</span>
         </div>
     </div>
 </article>
