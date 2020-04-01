@@ -29,11 +29,11 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Extremely stupid way to approach "or" operator --}}
 {{#if prev}}
-{{pagination}}
+    {{> pagination}}
 {{else}}
-{{#if next}}
-{{pagination}}
-{{/if}}
+    {{#if next}}
+        {{> pagination}}
+    {{/if}}
 {{/if}}
 
 {{> footer}}
