@@ -534,7 +534,7 @@ h6,
 .pagination {
   display: flex;
   justify-content: space-between;
-  padding: 0.8em 0 4em;
+  padding: 0.8em 0;
 }
 .pagination__link {
   display: block;
