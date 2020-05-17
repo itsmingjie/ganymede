@@ -78,6 +78,7 @@ iframe {
   --link-color: rgba(0, 0, 0, .84);
   --link-color-dimmed: rgba(0, 0, 0, .4);
   --text-color: rgba(0, 0, 0, .8);
+  --alt-color: rgba(41, 116, 255, 1);
   --overlay-color: rgba(255, 255, 255, .85);
   --hint-color: #8a8e99;
   --background-color: #ffffff;
@@ -91,6 +92,7 @@ iframe {
     --link-color: rgba(255, 255, 255,.9);
     --link-color-dimmed: rgba(255, 255, 255, .4);
     --text-color: rgba(255, 255, 255, 1);
+    --alt-color: rgba(113, 157, 240, 1);
     --overlay-color: rgba(0, 0, 0, .85);
     --hint-color: #8492a6;
     --background-color: #121217;
