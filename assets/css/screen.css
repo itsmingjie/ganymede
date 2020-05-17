@@ -323,9 +323,9 @@ h6,
 .post__content a {
   /* box-shadow: #1c2437 0px -0.5px 0px inset; */
   /* color: var(--shadow-color) */
-  text-decoration: underline wavy;
-  text-underline-position: under;
   color: var(--alt-color);
+  border-bottom: 2px dotted var(--alt-color);
+  text-decoration: none;
 }
 
 /* IMG */
