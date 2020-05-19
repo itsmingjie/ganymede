@@ -228,10 +228,12 @@ h6,
 .card__img-wrapper {
   margin-right: 2rem;
 }
+.card__img-bg {
+  color: var(--alt-color);
+}
 .card__img {
   width: 205px;
   height: 150px;
-  float: left;
   object-fit: cover;
   transform: translate(8px, -8px);
   transition: 200ms ease-in-out;
