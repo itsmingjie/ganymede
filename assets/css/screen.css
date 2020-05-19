@@ -349,10 +349,10 @@ h6,
 .post__separator {
   background: linear-gradient(
     to left,
-    currentColor calc(50% - 16px),
-    transparent calc(50% - 16px),
-    transparent calc(50% + 16px),
-    currentColor calc(50% + 16px)
+    currentColor calc(50% - 12px),
+    transparent calc(50% - 12px),
+    transparent calc(50% + 12px),
+    currentColor calc(50% + 12px)
   );
   background-color: rgba(0, 0, 0, 0);
   background-color: transparent !important;
@@ -368,17 +368,17 @@ h6,
   background: currentColor;
   content: "";
   display: block;
-  height: 1.2rem;
+  height: .8rem;
   position: absolute;
-  top: calc(50% - 0.6rem);
+  top: calc(50% - 0.4rem);
   transform: rotate(22.5deg);
   width: 0.1rem;
 }
 .post__separator::before {
-  left: calc(50% - 0.35rem);
+  left: calc(50% - 0.25rem);
 }
 .post__separator::after {
-  right: calc(50% - 0.35rem);
+  right: calc(50% - 0.25rem);
 }
 .post__tags,
 .post__permalink {
