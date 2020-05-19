@@ -167,6 +167,7 @@ h6,
 
 .card__content {
   width: 100%;
+  margin-left: 8px;
   /* width: 75%; */
   /* margin-right: 152px; */
 }
@@ -232,6 +233,11 @@ h6,
   height: 150px;
   float: left;
   object-fit: cover;
+  transform: translate(8px, -8px);
+  transition: 200ms ease-in-out;
+}
+.card__img:hover {
+  transform: translate(0);
 }
 
 /* .card__img-bg {
