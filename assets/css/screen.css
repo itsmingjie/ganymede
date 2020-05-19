@@ -236,7 +236,7 @@ h6,
   height: 150px;
   object-fit: cover;
   transform: translate(8px, -8px);
-  transition: 200ms ease-in-out;
+  transition: 100ms ease-in-out;
 }
 .card__img:hover {
   transform: translate(0);
