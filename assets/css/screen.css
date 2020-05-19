@@ -360,7 +360,7 @@ h6,
   height: 0.08rem;
   overflow: visible;
   position: relative;
-  color: var(--alt-color);
+  color: var(--hint-color);
   margin: 1.2rem auto;
 }
 .post__separator::before,
@@ -368,17 +368,17 @@ h6,
   background: currentColor;
   content: "";
   display: block;
-  height: 1.6rem;
+  height: 1.2rem;
   position: absolute;
-  top: calc(50% - 0.8rem);
+  top: calc(50% - 0.6rem);
   transform: rotate(22.5deg);
   width: 0.1rem;
 }
 .post__separator::before {
-  left: calc(50% - 0.5rem);
+  left: calc(50% - 0.35rem);
 }
 .post__separator::after {
-  right: calc(50% - 0.5rem);
+  right: calc(50% - 0.35rem);
 }
 .post__tags,
 .post__permalink {
