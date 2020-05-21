@@ -19,7 +19,6 @@ The theme is based on [Callisto](https://github.com/jckyeh/Callisto-Ghost-Theme)
 -   [x] Autodeploy to my Ghost instance via GitHub Actions
 -   [x] Preview post special styling & formatting
 -   [x] Featured post display order
--   [x] Image lightbox via [Fluidbox](https://github.com/terrymun/Fluidbox)
 -   [x] Complete CSS dark mode support based on [Andy Bell](https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/)'s guide.
 
 ## Copyright & License
