@@ -354,6 +354,11 @@ h6,
   max-width: 100%;
   margin: 0 auto;
 }
+.post__content .credit {
+  color: var(--hint-color);
+  font-size: medium;
+  font-style: italic; 
+}
 .post__separator {
   background: linear-gradient(
     to left,
