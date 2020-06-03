@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 .card__title a {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Wremena", sans-serif;
 }
 
 .post__content {
@@ -79,7 +79,7 @@ h6,
   color: var(--text-color);
   /* font-weight: bold; */
   /* font-family: 'Source Serif Pro', serif; */
-  font-family: "Playfair Display", serif;
+  font-family: "Wremena", serif;
   /* text-transform: uppercase; */
   /* letter-spacing: 0.02rem; */
 }
@@ -206,7 +206,7 @@ h6,
 .card__featured,
 .post__pre {
   display: inline-block;
-  font-family: "Playfair Display";
+  font-family: "Wremena";
   color: var(--text-color);
 }
 
