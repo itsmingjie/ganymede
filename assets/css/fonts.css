@@ -64,7 +64,7 @@
   font-family: "Wremena";
   src: url("../fonts/Wremena_Bold.otf") format("opentype"),
     url("../fonts/Wremena_Bold.woff") format("woff");
-  font-weight: 300;
+  font-weight: bold;
   font-style: normal;
   font-display: fallback;
 }
