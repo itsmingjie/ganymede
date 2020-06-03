@@ -20,7 +20,7 @@ summary, time, mark, audio, video {
   text-rendering: optimizeLegibility;
   font-kerning: auto;
   /* font-family: 'Avenir', 'Open Sans', sans-serif; */
-  font-family: 'Charter', 'Source Serif Pro', serif;
+  font-family: 'Charter', serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,

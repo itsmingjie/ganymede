@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 .card__title a {
-  font-family: "Wremena", sans-serif;
+  font-family: "Wremena", serif;
 }
 
 .post__content {
@@ -109,7 +109,7 @@ h6,
 .header__link {
   position: relative;
   margin-left: 2.1rem;
-  font-family: "Charter", "Open Sans", sans-serif;
+  font-family: "Charter", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   padding: 0;
@@ -513,7 +513,7 @@ h6,
   transition: transform 0.2s ease-in-out;
 }
 .footer__link-label {
-  font-family: "Charter", "Open Sans", sans-serif;
+  font-family: "Charter", serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -611,7 +611,7 @@ h6,
 .footer div,
 .footer a {
   color: var(--hint-color);
-  font-family: "Charter", "Open Sans", serif;
+  font-family: "Charter", serif;
 }
 
 .footer a[target="_blank"]::after {
@@ -803,7 +803,7 @@ figure .fluidbox__ghost {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "Charter", "Open Sans", sans-serif;
+  font-family: "Charter", serif;
 }
 
 .subscribe__input:focus {
@@ -811,7 +811,7 @@ figure .fluidbox__ghost {
 }
 
 .subscribe__submit {
-  font-family: "Charter", "Open Sans", sans-serif;
+  font-family: "Charter", serif;
   background-color: transparent;
   color: var(--hint-color);
   border: 2px solid var(--hint-color);
