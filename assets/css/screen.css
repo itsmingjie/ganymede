@@ -354,7 +354,7 @@ h6,
 .post__content .credit {
   color: var(--hint-color);
   font-size: medium;
-  font-style: italic; 
+  font-style: italic;
 }
 .post__separator {
   background: linear-gradient(
@@ -365,7 +365,7 @@ h6,
     currentColor calc(50% + 12px)
   );
   background-color: rgba(0, 0, 0, 0);
-  background-color: transparent !important;
+  background-color: transparent;
   border: none;
   height: 0.08rem;
   overflow: visible;
@@ -378,7 +378,7 @@ h6,
   background: currentColor;
   content: "";
   display: block;
-  height: .8rem;
+  height: 0.8rem;
   position: absolute;
   top: calc(50% - 0.4rem);
   transform: rotate(22.5deg);
@@ -641,8 +641,7 @@ a.kg-bookmark-container {
   color: var(--text-color);
   text-decoration: none;
   min-height: 148px;
-  box-shadow: var(--shadow-color) 0px 1px 4px,
-    var(--shadow-color) 0px 0px 0px 1px;
+  box-shadow: var(--shadow-color) 0px 1px 4px, var(--shadow-color) 0px 0px 0px 1px;
   border-radius: 3px;
 }
 
