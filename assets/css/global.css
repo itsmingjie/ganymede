@@ -103,8 +103,12 @@ section {
 }
 
 body {
-  color: #2b2b2b;
-  background-color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 500ms ease;
+  font-size: 1.24rem;
+  line-height: 1.54;
+  text-rendering: optimizeLegibility;
 }
 
 blockquote,
@@ -112,12 +116,11 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
-  content: none;
 }
 
 table {
@@ -180,12 +183,6 @@ iframe {
     --shadow-color: rgba(255, 255, 255, 0.1);
     --block-background-color: rgba(255, 255, 255, 0.05);
   }
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: all 500ms ease;
 }
 
 a {
@@ -259,13 +256,6 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid var(--hint-color);
-}
-
-body {
-  font-size: 1.24rem;
-  line-height: 1.54;
-  color: var(--text-color);
-  text-rendering: optimizeLegibility;
 }
 
 @media (max-width: 500px) {
