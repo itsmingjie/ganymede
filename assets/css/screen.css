@@ -467,7 +467,6 @@ h6,
   font-size: 1rem;
   line-height: 1.4em;
   background: var(--block-background-color);
-  /* border-radius: 5px; */
 }
 
 .post__content pre code {
@@ -773,7 +772,7 @@ img.kg-bookmark-icon {
 
 .preview__note {
   background-color: lightyellow;
-  color: #000000;
+  color: #000;
 }
 
 #caption-overlay.caption-overlay {
@@ -794,7 +793,7 @@ img.kg-bookmark-icon {
 
 #caption-overlay .img-caption {
   font-size: 1rem;
-  color: var(--text-color) !important;
+  color: var(--text-color);
 }
 
 figure .fluidbox__ghost {

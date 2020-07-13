@@ -1,6 +1,3 @@
-/* Reset
-/* ---------------------------------------------------------- */
-
 html,
 body,
 div,
@@ -86,7 +83,6 @@ video {
   font-kerning: auto;
   font-family: "Charter", serif;
 }
-/* HTML5 display-role reset for older browsers */
 
 article,
 aside,
@@ -146,19 +142,13 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
 iframe {
   width: 100%;
-  /* height: 100%; */
 }
-/* END RESET*/
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 
 :root {
   --link-color: rgba(52, 52, 52, 1);
@@ -166,7 +156,7 @@ iframe {
   --alt-color: rgba(41, 116, 255, 1);
   --overlay-color: rgba(255, 255, 255, 0.85);
   --hint-color: #8a8e99;
-  --background-color: #ffffff;
+  --background-color: #fff;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --block-background-color: rgba(0, 0, 0, 0.05);
 }
