@@ -194,7 +194,7 @@ p,
 ul,
 ol,
 dl {
-  margin: 0 0 1.3em 0;
+  margin: 0 0 1.3em;
 }
 
 li {
@@ -224,7 +224,7 @@ h5,
 h6 {
   text-rendering: optimizeLegibility;
   line-height: 1.25;
-  margin: 1.1rem 0 0.9rem 0;
+  margin: 1.1rem 0 0.9rem;
   font-weight: 600;
 }
 
@@ -237,7 +237,7 @@ h2 {
 }
 
 h3 {
-  margin: 0.6rem 0 0.5rem 0;
+  margin: 0.6rem 0 0.5rem;
   font-size: 1.24rem;
 }
 
