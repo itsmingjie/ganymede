@@ -341,6 +341,7 @@ h6,
 
 .post__content figure {
   margin: 1em 0 2em;
+  text-align: center;
 }
 
 .post__content figcaption {
